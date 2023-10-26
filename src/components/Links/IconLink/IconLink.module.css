@@ -1,0 +1,7 @@
+.iconLink {
+  padding: 0.25rem;
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  line-height: 17px;
+}

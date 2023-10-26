@@ -1,0 +1,55 @@
+.footer {
+  margin: var(--footer-margin-top-bottom) 0;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.socialLink {
+  position: relative;
+  display: flex;
+}
+
+.icon {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.iconHidden {
+  opacity: 0;
+}
+
+.hoverIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.hoverIconVisible {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin: 1rem 0;
+  }
+
+  .socialList {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
