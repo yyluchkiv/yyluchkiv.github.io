@@ -1,3 +1,23 @@
+# Folders
+target/
+.gradle/
+build/
+logs/
+
+# IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.settings/
+*.classpath
+*.project
+
+# Sonar
+.scannerwork
+
 # dependencies
 /node_modules
 /.pnp
@@ -31,24 +51,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Folders
-target/
-.gradle/
-build/
-logs/
-
-# IDEA
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# Eclipse
-.settings/
-*.classpath
-*.project
-
-# Sonar
-.scannerwork
-
