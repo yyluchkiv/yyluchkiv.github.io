@@ -1,0 +1,19 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home p:first-child {
+  margin-top: 0;
+}
+
+.badges {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery {
+  margin: 1.25rem 0;
+}
