@@ -81,7 +81,7 @@ const galleryTop = [
   }
 ]
 
-const galleryMidle = [
+const galleryMiddle = [
   {
     ratio: 50,
     images: [
@@ -184,7 +184,7 @@ export default function Home() {
         Silly me. Then I tried to start a professional career as a software engineer. It worked, and I liked it.
       </p>
       <div className={ Styles.gallery }>
-        <ImageGallery gallery={ galleryMidle } gap={ 15 } imageBorderRadius={ 2 } preview={ false } />
+        <ImageGallery gallery={ galleryMiddle } gap={ 15 } imageBorderRadius={ 2 } preview={ false } />
       </div>
       <p>
         Right now I want to believe I am a Java-ecosystem software engineer. In the early days of my career,
