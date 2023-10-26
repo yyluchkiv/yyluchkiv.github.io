@@ -1,11 +1,12 @@
-name: Deploy Next.js site to Pages
+name: nextjs
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - dev
+      - main
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -75,6 +76,7 @@ jobs:
           path: ./out
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

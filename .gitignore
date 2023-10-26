@@ -1,4 +1,22 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Folders
+target/
+.gradle/
+build/
+logs/
+
+# IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.settings/
+*.classpath
+*.project
+
+# Sonar
+.scannerwork
 
 # dependencies
 /node_modules
