@@ -161,15 +161,16 @@ export default function Home() {
   return (
     <div className={ Styles.home }>
       <p>
-        I am a software engineer, father and curious about how everything is working
-        . I currently work at <IconLink iconSource={ Tech1SmallIcon } alt='Tech1' text='Tech1' link='https://tech1.io/' />
+        I am a software engineer, father and curious about how everything works.
+        I currently work at <IconLink iconSource={ Tech1SmallIcon } alt='Tech1' text='Tech1' link='https://tech1.io/' />
         , where I build and grow efficient teams to deliver ideas to the market
         using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />
         , <IconLink iconSource={ SpringIcon } alt='Spring' text='Spring' link='https://spring.io/projects/spring-framework' />
         , <IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />
         , <IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />
         , <IconLink iconSource={ VueIcon } alt='Vue.js' text='Vue.js' link='https://vuejs.org/' />
-        , <IconLink iconSource={ PythonIcon } alt='Python' text='Python' link='https://www.python.org/' /> and <IconLink iconSource={ AwsIcon } alt='AWS' text='AWS' link='https://aws.amazon.com/' />.
+        {/*, <IconLink iconSource={ PythonIcon } alt='Python' text='Python' link='https://www.python.org/' />*/}
+        and <IconLink iconSource={ AwsIcon } alt='AWS' text='AWS' link='https://aws.amazon.com/' />.
       </p>
       <div className={ Styles.gallery }>
         <ImageGallery gallery={ galleryTop } gap={ 15 } imageBorderRadius={ 2 } preview={ false } />
@@ -186,10 +187,10 @@ export default function Home() {
         <ImageGallery gallery={ galleryMidle } gap={ 15 } imageBorderRadius={ 2 } preview={ false } />
       </div>
       <p>
-        Right now I want to believe I am a Java-ecosystem software engineer. In the early days of my career
-        , I wanted to be a full-stack developer to be able to complete apps individually
-        . Or at least in the early stages. But the time came and I understood that to be
-        a really good full-stack developer you need to be a backend developer during your work time and be a frontend developer in your spare time :)
+        Right now I want to believe I am a Java-ecosystem software engineer. In the early days of my career,
+        I wanted to be a full-stack developer to be able to complete apps individually.
+        Or at least in the early stages. But the time came and I understood that to be
+        a really good full-stack developer you need to be a backend developer during your work time and be a frontend developer in your spare time.
       </p>
       <p>
         Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
