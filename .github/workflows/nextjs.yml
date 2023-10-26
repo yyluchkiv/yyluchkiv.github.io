@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
 #          path: ./out
-          path: ./next
+          path: ./.next
 
   deploy:
     if: github.ref == 'refs/heads/main'
