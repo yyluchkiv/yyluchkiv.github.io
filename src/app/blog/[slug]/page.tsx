@@ -1,6 +1,5 @@
 import Styles from './Article.module.css'
 import { allPosts } from 'contentlayer/generated'
-import { useRouter } from 'next/router'
 import ReadingTime from 'reading-time'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
@@ -50,9 +49,15 @@ function Mdx({ code }: { code: string }) {
   )
 }
 
-export default function Article() {
-  const router = useRouter()
-  const post = allPosts.find((post) => post.slug === router.query.slug)
+export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post.url }))
+
+export const generateMetadata = ({ params }: { params: any }) => {
+  const post = allPosts.find((post) => post.url === params.slug)
+  return { title: post?.title }
+}
+
+export default function Article({ params }: { params: any }) {
+  const post = allPosts.find((post) => post.slug === params?.slug)
   TimeAgo.addLocale(en)
   const timeAgo = new TimeAgo('en-US')
 

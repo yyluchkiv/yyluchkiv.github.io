@@ -1,3 +1,5 @@
+'use client'
+
 import 'swiper/css'
 import 'swiper/css/scrollbar'
 import Styles from './ImageGallery.module.css'

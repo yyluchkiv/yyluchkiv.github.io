@@ -1,3 +1,5 @@
+'use client'
+
 import Styles from './Footer.module.css'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
@@ -44,12 +46,12 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
   }
 
   return (
-    <li className={ Styles.socialItem } key={ socialItem.alt } onMouseEnter={ onMouseEnterLink } onMouseLeave={ onMouseLeaveLink }>
-      <Link className={ Styles.socialLink } href={ socialItem.href } target='_blank'>
-        <Image className={ `${ Styles.icon } ${ isHovering && Styles.iconHidden }` } width={ 22 } height={ 22 } src={ socialItem.icon } alt={ socialItem.alt } priority={ true } />
-        <Image className={ `${ Styles.hoverIcon } ${ isHovering && Styles.hoverIconVisible }` } width={ 22 } height={ 22 } src={ socialItem.hoverIcon } alt={ socialItem.alt } />
-      </Link>
-    </li>
+      <li className={ Styles.socialItem } key={ socialItem.alt } onMouseEnter={ onMouseEnterLink } onMouseLeave={ onMouseLeaveLink }>
+        <Link className={ Styles.socialLink } href={ socialItem.href } target='_blank'>
+          <Image className={ `${ Styles.icon } ${ isHovering && Styles.iconHidden }` } width={ 22 } height={ 22 } src={ socialItem.icon } alt={ socialItem.alt } priority={ true } />
+          <Image className={ `${ Styles.hoverIcon } ${ isHovering && Styles.hoverIconVisible }` } width={ 22 } height={ 22 } src={ socialItem.hoverIcon } alt={ socialItem.alt } />
+        </Link>
+      </li>
   )
 }
 
@@ -150,16 +152,16 @@ const Footer: React.FC<{
   ]
 
   return (
-    <div className={ Styles.footer }>
-      <div className={ Styles.leftSide }>
-        <span className={ Styles.copyright }>Yurii Luchkiv © 2019 — { DateUtility.getCurrentYear() }</span>
+      <div className={ Styles.footer }>
+        <div className={ Styles.leftSide }>
+          <span className={ Styles.copyright }>Yurii Luchkiv © 2019 — { DateUtility.getCurrentYear() }</span>
+        </div>
+        <div className={ Styles.rightSide }>
+          <ul className={ Styles.socialList }>
+            { socials.map(socialItem => socialItem.visible && <SocialLink socialItem={ socialItem } key={ socialItem.alt } />) }
+          </ul>
+        </div>
       </div>
-      <div className={ Styles.rightSide }>
-        <ul className={ Styles.socialList }>
-          { socials.map(socialItem => socialItem.visible && <SocialLink socialItem={ socialItem } key={ socialItem.alt } />) }
-        </ul>
-      </div>
-    </div>
   )
 }
 
