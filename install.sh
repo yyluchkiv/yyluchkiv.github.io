@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-pnpm install
+npm install

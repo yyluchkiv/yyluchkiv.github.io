@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import Navigation from '@/src/components/Navigation/Navigation'
 import Footer from '@/src/components/Footer/Footer'
 import LocalFont from 'next/font/local'
+import '@/src/app/global.css'
 
 const graphik = LocalFont({
   src: [
@@ -25,19 +25,22 @@ const graphik = LocalFont({
   display: 'swap',
 });
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export const generateMetadata = () => {
+  return { title: 'Yurii Luchkiv' }
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <Head>
-        <meta name="description" content="Test Website GitHub Pages" />
-      </Head>
-      <header className={ graphik.className }>
-        <Navigation />
-      </header>
-      <main className={ graphik.className }>{ children }</main>
-      <footer className={ graphik.className }>
-        <Footer />
-      </footer>
-    </>
+    <html lang='en'>
+      <body>
+        <header className={ graphik.className }>
+          <Navigation />
+        </header>
+        <main className={ graphik.className }>{ children }</main>
+        <footer className={ graphik.className }>
+          <Footer />
+        </footer>
+      </body>
+    </html>
   )
 }

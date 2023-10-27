@@ -1,3 +1,5 @@
+'use client'
+
 import Styles from './Blog.module.css'
 import { allPosts } from 'contentlayer/generated'
 import Link from 'next/link'
