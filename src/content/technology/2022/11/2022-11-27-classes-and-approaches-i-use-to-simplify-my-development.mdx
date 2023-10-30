@@ -4,6 +4,7 @@ publishedAt: '2022-11-27'
 summary: 'Development approach I use to simplify my development'
 url: 'classes-and-approaches-i-use-to-simplify-my-development'
 category: 'technology'
+image: '/assets/pngs/Blog/technology/2022/11/2022-11-27-classes-and-approaches-i-use-to-simplify-my-development-01.png'
 ---
 
 How many times did you see the next class?
@@ -52,9 +53,9 @@ public interface UserService {
   List<Book> findBooks(Username username, int year);
   List<Article> findArticles(Username username, String author);
   List<VeryCustomObject> findBy(
-    Username username, 
-      String attribute1, 
-      String attribute2, 
+    Username username,
+      String attribute1,
+      String attribute2,
       String attribute3
   );
 }
@@ -93,7 +94,7 @@ const book = response.data
 # WAS
 # const username = book.username
 
-const username = book.username.identifier # <-- 
+const username = book.username.identifier # <--
 ```
 
 Not very efficient to have a small advantage on the server side but a lot of problems on the front end. And I am not even talking about cases when you need to send proper JSON structure to the server for the book creation process. So what did I do?

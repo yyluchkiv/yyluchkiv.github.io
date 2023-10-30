@@ -26,7 +26,18 @@ const graphik = LocalFont({
 });
 
 export const generateMetadata = () => {
-  return { title: 'Yurii Luchkiv' }
+  return {
+    metadataBase: new URL('https://yurii-luchkiv.github.io/'),
+    title: 'Yurii Luchkiv',
+    openGraph: {
+      title: 'Yurii Luchkiv',
+      description: 'Code hard. Work hard. Spend time with your family.',
+      siteName: 'Yurii Luchkiv',
+      url: 'https://yurii-luchkiv.github.io/',
+      locale: 'en_US',
+      type: 'website',
+    }
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
