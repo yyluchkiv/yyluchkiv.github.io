@@ -249,6 +249,19 @@ const ImageGallery: React.FC<{
     setShowPreview(false)
   }
 
+  useEffect(() => {
+    const keyDownHandler = (event: any) => {
+      if (event.key === 'Escape' && showPreview) {
+        closePreview()
+      }
+    }
+    document.addEventListener('keydown', keyDownHandler)
+
+    return () => {
+      document.removeEventListener('keydown', keyDownHandler)
+    }
+  }, [showPreview])
+
   return (
     <div className={ getGalleryCssClass() } style={ getGalleryStyles() }>
       {
