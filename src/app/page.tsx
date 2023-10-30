@@ -160,7 +160,7 @@ export default function Home() {
   return (
       <div className={ Styles.home }>
         <p>
-          I am a software engineer, father and curious about how everything works.
+          I am a software engineer, a father and always curious about how things works.
           I currently work at <IconLink iconSource={ Tech1SmallIcon } alt='Tech1' text='Tech1' link='https://tech1.io/' />,
           where I build and grow efficient teams to deliver ideas to the market
           using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />,
