@@ -52,12 +52,12 @@ function useWindowSize () {
 
 function SwiperButtonNext () {
   const swiper = useSwiper()
-  return <Image className={ Styles.arrowRight } src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slideNext() } />
+  return <Image className={ Styles.arrowRight } src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slideNext(1) } />
 }
 
 function SwiperButtonPrev () {
   const swiper = useSwiper()
-  return <Image className={ Styles.arrowLeft } src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slidePrev() } />
+  return <Image className={ Styles.arrowLeft } src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slidePrev(1) } />
 }
 
 const ImageGallery: React.FC<{
@@ -249,6 +249,19 @@ const ImageGallery: React.FC<{
     setShowPreview(false)
   }
 
+  useEffect(() => {
+    const keyDownHandler = (event: any) => {
+      if (event.key === 'Escape' && showPreview) {
+        closePreview()
+      }
+    }
+    document.addEventListener('keydown', keyDownHandler)
+
+    return () => {
+      document.removeEventListener('keydown', keyDownHandler)
+    }
+  }, [showPreview])
+
   return (
     <div className={ getGalleryCssClass() } style={ getGalleryStyles() }>
       {
@@ -282,6 +295,8 @@ const ImageGallery: React.FC<{
             slidesPerView={ 1 }
             loop={ true }
             zoom={ true }
+            allowTouchMove={ screenWidth < mobilePointWidth ? true : false }
+            speed={ screenWidth < mobilePointWidth ? 300 : 1 }
             keyboard={{
               enabled: true
             }}
