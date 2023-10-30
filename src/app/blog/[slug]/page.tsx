@@ -53,7 +53,26 @@ export const generateStaticParams = async () => allPosts.map((post) => ({ slug: 
 
 export const generateMetadata = ({ params }: { params: any }) => {
   const post = allPosts.find((post) => post.url === params.slug)
-  return { title: post?.title }
+  return {
+    metadataBase: new URL('https://yurii-luchkiv.github.io/'),
+    title: post?.title,
+    openGraph: {
+      title: post?.title,
+      description: post?.summary,
+      siteName: 'Yurii Luchkiv',
+      url: `https://yurii-luchkiv.github.io/blog/${post?.url}`,
+      images: [
+        {
+          type: "image/png",
+          width: 800,
+          height: 600,
+          url: post?.image
+        }
+      ],
+      locale: 'en_US',
+      type: 'article',
+    }
+  }
 }
 
 export default function Article({ params }: { params: any }) {
