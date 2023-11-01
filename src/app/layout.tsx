@@ -31,7 +31,7 @@ export const generateMetadata = () => {
     title: 'Yurii Luchkiv',
     openGraph: {
       title: 'Yurii Luchkiv',
-      description: 'Code hard. Work hard. Spend time with your family',
+      description: 'Code hard. Work hard. Spend time with your family.',
       siteName: 'Yurii Luchkiv',
       url: 'https://yurii-luchkiv.github.io/',
       images: [
