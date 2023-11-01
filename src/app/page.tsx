@@ -156,6 +156,29 @@ const galleryBottom = [
   }
 ]
 
+export const generateMetadata = () => {
+  return {
+    metadataBase: new URL('https://yurii-luchkiv.github.io/'),
+    title: 'Yurii Luchkiv',
+    openGraph: {
+      title: 'Yurii Luchkiv',
+      description: 'Code hard. Work hard. Spend time with your family',
+      siteName: 'Yurii Luchkiv',
+      url: 'https://yurii-luchkiv.github.io/',
+      images: [
+        {
+          type: "image/png",
+          width: 800,
+          height: 600,
+          url: '/assets/pngs/Home/Main.png'
+        }
+      ],
+      locale: 'en_US',
+      type: 'website',
+    }
+  }
+}
+
 export default function Home() {
   return (
       <div className={ Styles.home }>
