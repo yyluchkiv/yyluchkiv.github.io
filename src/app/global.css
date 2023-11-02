@@ -154,6 +154,12 @@ article blockquote {
   text-align: center;
 }
 
+article hr {
+  border-color: rgb(64, 64, 64);
+  border-top-width: 1px;
+  margin: 3rem 0;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0 1.25rem;
