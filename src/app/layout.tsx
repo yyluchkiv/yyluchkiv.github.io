@@ -27,13 +27,13 @@ const graphik = LocalFont({
 
 export const generateMetadata = () => {
   return {
-    metadataBase: new URL('https://yurii-luchkiv.github.io/'),
+    metadataBase: new URL('https://yyluchkiv.com/'),
     title: 'Yurii Luchkiv',
     openGraph: {
       title: 'Yurii Luchkiv',
       description: 'Code hard. Work hard. Spend time with your family',
       siteName: 'Yurii Luchkiv',
-      url: 'https://yurii-luchkiv.github.io/',
+      url: 'https://yyluchkiv.com/',
       images: [
         {
           type: "image/png",
