@@ -55,9 +55,9 @@ export const generateMetadata = ({ params }: { params: any }) => {
   const post = allPosts.find((post) => post.url === params.slug)
   return {
     metadataBase: new URL('https://yurii-luchkiv.github.io/'),
-    title: post?.title,
+    title: 'Yurii Luchkiv — ' + post?.title,
     openGraph: {
-      title: post?.title,
+      title: 'Yurii Luchkiv — ' + post?.title,
       description: post?.summary,
       siteName: 'Yurii Luchkiv',
       url: `https://yurii-luchkiv.github.io/blog/${post?.url}`,
