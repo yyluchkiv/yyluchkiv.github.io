@@ -143,6 +143,17 @@ article li:not([data-rehype-pretty-code-fragment]) code {
   border-radius: 0.5rem;
 }
 
+article blockquote {
+  font-weight: 500;
+  font-style: italic;
+  color: #f5f5f5;
+  border-left: 0.25rem solid rgb(64, 64, 64);
+  quotes: "\201C""\201D""\2018""\2019";
+  padding-left: 1em;
+  /* in 154 row you can changing text-align for blockquote tag ('start' is defauld value for text-align) */
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0 1.25rem;

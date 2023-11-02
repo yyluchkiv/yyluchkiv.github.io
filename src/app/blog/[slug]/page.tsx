@@ -66,7 +66,7 @@ export const generateMetadata = ({ params }: { params: any }) => {
           type: "image/png",
           width: 800,
           height: 600,
-          url: post?.image
+          url: post?.image ? post?.image : '/assets/pngs/Home/Main.png'
         }
       ],
       locale: post?.locale,
