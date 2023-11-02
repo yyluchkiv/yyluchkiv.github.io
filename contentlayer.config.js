@@ -47,10 +47,15 @@ export const Post = defineDocumentType(() => ({
       required: true
     },
     url: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
     hide: {
       type: 'boolean'
+    },
+    locale: {
+      type: 'string',
+      required: true
     }
   },
   computedFields
