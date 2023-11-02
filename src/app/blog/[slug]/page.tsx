@@ -69,7 +69,7 @@ export const generateMetadata = ({ params }: { params: any }) => {
           url: post?.image
         }
       ],
-      locale: 'en_US',
+      locale: post?.locale,
       type: 'article',
     }
   }
