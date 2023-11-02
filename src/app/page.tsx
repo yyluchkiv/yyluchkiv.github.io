@@ -20,10 +20,8 @@ import Home01 from '@/public/assets/jpgs/Home/01.jpg'
 import Home02 from '@/public/assets/jpgs/Home/02.jpg'
 import Home03 from '@/public/assets/jpgs/Home/03.jpg'
 import Home04 from '@/public/assets/jpgs/Home/04.jpg'
-
-import LighthouseImage from '@/public/assets/pngs/Home/Lighthouse.png'
-import SunflowerImage from '@/public/assets/pngs/Home/Sunflower.png'
-import SunsetImage from '@/public/assets/pngs/Home/Sunset.png'
+import Home05 from '@/public/assets/jpgs/Home/05.jpg'
+import Home06 from '@/public/assets/jpgs/Home/06.jpg'
 
 const galleryTop = [
   {
@@ -60,27 +58,25 @@ const galleryTop = [
 
 const galleryMiddle = [
   {
-    ratio: 50,
+    ratio: 100,
     images: [
       {
-        source: LighthouseImage,
+        source: Home05,
         ratio: 100,
-        alt: 'Lighthouse'
+        alt: 'Mountains'
       }
     ]
-  },
+  }
+]
+
+const galleryBottom = [
   {
-    ratio: 50,
+    ratio: 100,
     images: [
       {
-        source: SunflowerImage,
-        ratio: 60,
-        alt: 'Sunflower'
-      },
-      {
-        source: SunsetImage,
-        ratio: 40,
-        alt: 'Sunset'
+        source: Home06,
+        ratio: 100,
+        alt: 'Mountains'
       }
     ]
   }
@@ -112,7 +108,7 @@ export default function Home() {
           Silly me. Then I tried to start a professional career as a software engineer. It worked, and I liked it.
         </p>
         <div className={ Styles.gallery }>
-          <ImageGallery gallery={ galleryMiddle } gap={ 15 } imageBorderRadius={ 2 } preview={ false } />
+          <ImageGallery gallery={ galleryMiddle } gap={ 15 } imageBorderRadius={ 2 } orientation={ 'h' } preview={ false } />
         </div>
         <p>
           Right now I want to believe I am a Java-ecosystem software engineer. In the early days of my career,
@@ -123,6 +119,9 @@ export default function Home() {
         <p>
           Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
         </p>
+        <div className={ Styles.gallery }>
+          <ImageGallery gallery={ galleryBottom } gap={ 15 } imageBorderRadius={ 2 } orientation='h' preview={ false } />
+        </div>
         <p>
           Over the past decade I worked with multiple companies, projects and teams.
         </p>
