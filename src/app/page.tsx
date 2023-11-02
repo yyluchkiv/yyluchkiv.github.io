@@ -16,65 +16,43 @@ import AmpardIcon from '@/public/assets/svgs/icons/Home/Ampard.svg'
 import ConscensiaIcon from '@/public/assets/svgs/icons/Home/Conscensia.svg'
 import SystematicIcon from '@/public/assets/svgs/icons/Home/Systematic.svg'
 
-import BirdImage from '@/public/assets/avifs/Home/Bird.avif'
-import PonyImage from '@/public/assets/avifs/Home/Pony.avif'
-import RocksImage from '@/public/assets/avifs/Home/Rocks.avif'
-import GlacierImage from '@/public/assets/avifs/Home/Glacier.avif'
-import WaterfallImage from '@/public/assets/avifs/Home/Waterfall.avif'
-import SeaImage from '@/public/assets/avifs/Home/Sea.avif'
-import AuroraPolarisImage from '@/public/assets/jpgs/Home/AuroraPolaris.jpg'
-import AutumnImage from '@/public/assets/jpgs/Home/Autumn.jpg'
-import ForestImage from '@/public/assets/jpgs/Home/Forest.jpg'
-import IslandImage from '@/public/assets/jpgs/Home/Island.jpg'
-import LakeImage from '@/public/assets/jpgs/Home/Lake.jpg'
-import RoadImage from '@/public/assets/jpgs/Home/Road.jpg'
+import Home01 from '@/public/assets/jpgs/Home/01.jpg'
+import Home02 from '@/public/assets/jpgs/Home/02.jpg'
+import Home03 from '@/public/assets/jpgs/Home/03.jpg'
+import Home04 from '@/public/assets/jpgs/Home/04.jpg'
+
 import LighthouseImage from '@/public/assets/pngs/Home/Lighthouse.png'
 import SunflowerImage from '@/public/assets/pngs/Home/Sunflower.png'
 import SunsetImage from '@/public/assets/pngs/Home/Sunset.png'
 
 const galleryTop = [
   {
-    ratio: 33.33,
+    ratio: 50,
     images: [
       {
-        source: BirdImage,
+        source: Home01,
         ratio: 40,
-        alt: 'Bird'
+        alt: 'JDay Conference'
       },
       {
-        source: PonyImage,
+        source: Home02,
         ratio: 60,
-        alt: 'Pony'
+        alt: 'SoftServer University'
       }
     ]
   },
   {
-    ratio: 33.34,
+    ratio: 50,
     images: [
       {
-        source: RocksImage,
+        source: Home03,
         ratio: 60,
-        alt: 'Rocks'
+        alt: 'Tech1'
       },
       {
-        source: GlacierImage,
+        source: Home04,
         ratio: 40,
-        alt: 'Glacier'
-      }
-    ]
-  },
-  {
-    ratio: 33.33,
-    images: [
-      {
-        source: WaterfallImage,
-        ratio: 40,
-        alt: 'Waterfall'
-      },
-      {
-        source: SeaImage,
-        ratio: 60,
-        alt: 'Sea'
+        alt: 'Lviv IT School'
       }
     ]
   }
@@ -103,54 +81,6 @@ const galleryMiddle = [
         source: SunsetImage,
         ratio: 40,
         alt: 'Sunset'
-      }
-    ]
-  }
-]
-
-const galleryBottom = [
-  {
-    ratio: 33.33,
-    images: [
-      {
-        source: AuroraPolarisImage,
-        ratio: 40,
-        alt: 'Bird'
-      },
-      {
-        source: AutumnImage,
-        ratio: 60,
-        alt: 'Pony'
-      }
-    ]
-  },
-  {
-    ratio: 33.34,
-    images: [
-      {
-        source: ForestImage,
-        ratio: 60,
-        alt: 'Rocks'
-      },
-      {
-        source: IslandImage,
-        ratio: 40,
-        alt: 'Glacier'
-      }
-    ]
-  },
-  {
-    ratio: 33.33,
-    images: [
-      {
-        source: LakeImage,
-        ratio: 40,
-        alt: 'Waterfall'
-      },
-      {
-        source: RoadImage,
-        ratio: 60,
-        alt: 'Sea'
       }
     ]
   }
@@ -193,9 +123,6 @@ export default function Home() {
         <p>
           Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
         </p>
-        <div className={ Styles.gallery }>
-          <ImageGallery gallery={ galleryBottom } gap={ 15 } imageBorderRadius={ 2 } orientation='h' preview={ false } />
-        </div>
         <p>
           Over the past decade I worked with multiple companies, projects and teams.
         </p>
