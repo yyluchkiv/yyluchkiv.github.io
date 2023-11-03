@@ -89,10 +89,10 @@ export default function Home() {
           I am a software engineer, a father and always curious about how things works.
           I currently work at <IconLink iconSource={ Tech1SmallIcon } alt='Tech1' text='Tech1' link='https://tech1.io/' />,
           where I build and grow efficient teams to deliver ideas to the market
-          using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />,
-          <IconLink iconSource={ SpringIcon } alt='Spring' text='Spring' link='https://spring.io/projects/spring-framework' />,
-          <IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />,
-          <IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />,
+          using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />&nbsp;
+          <IconLink iconSource={ SpringIcon } alt='Spring' text='Spring' link='https://spring.io/projects/spring-framework' />&nbsp;
+          <IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />&nbsp;
+          <IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />&nbsp;
           <IconLink iconSource={ VueIcon } alt='Vue.js' text='Vue.js' link='https://vuejs.org/' /> and <IconLink iconSource={ AwsIcon } alt='AWS' text='AWS' link='https://aws.amazon.com/' />.
           {/*, <IconLink iconSource={ PythonIcon } alt='Python' text='Python' link='https://www.python.org/' />*/}
         </p>
