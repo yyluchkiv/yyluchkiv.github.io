@@ -160,6 +160,29 @@ article hr {
   margin: 3rem 0;
 }
 
+.not-found-page {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  min-height: calc(100vh - (var(--navigation-margin-top) + var(--navigation-height) + var(--main-padding-top) + ((var(--footer-margin-top-bottom) * 2) + var(--footer-height))));
+}
+
+.not-found-page h1 {
+  font-size: 24px;
+  padding-right: 23px;
+  font-weight: 500;
+  line-height: 49px;
+  vertical-align: top;
+  border-right: 1px solid rgba(255,255,255, 0.3);
+}
+
+.not-found-page h2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 49px;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0 1.25rem;
