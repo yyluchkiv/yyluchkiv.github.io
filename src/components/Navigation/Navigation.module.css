@@ -9,7 +9,7 @@
 }
 
 .item {
-  padding: 0.25rem 0.5rem; 
+  padding: 0.25rem 0.5rem;
 }
 
 .item:first-child {
@@ -21,8 +21,10 @@
   transition: color 0.1s linear;
 }
 
-.link:hover:not(.active) {
-  color: rgb(229, 229, 229);
+@media (min-width: 768px) {
+  .link:hover:not(.active) {
+    color: rgb(229, 229, 229);
+  }
 }
 
 .active {
