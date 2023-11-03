@@ -80,6 +80,27 @@ const Footer: React.FC<{
 }) => {
   const socials: SocialItem[] = [
     {
+      alt: 'Twitter',
+      icon: TwitterMonoIcon,
+      visible: twitterVisible,
+      hoverIcon: TwitterColorIcon,
+      href: 'https://twitter.com/yyluchkiv'
+    },
+    {
+      alt: 'Github',
+      icon: GithubMonoIcon,
+      visible: githubVisible,
+      hoverIcon: GithubColorIcon,
+      href: 'https://github.com/yurii-luchkiv'
+    },
+    {
+      alt: 'Facebook',
+      icon: FacebookMonoIcon,
+      visible: facebookVisible,
+      hoverIcon: FacebookColorIcon,
+      href: 'https://www.facebook.com/yurii.luchkiv'
+    },
+    {
       alt: 'Instagram',
       icon: InstagramMonoIcon,
       visible: instagramVisible,
@@ -94,32 +115,11 @@ const Footer: React.FC<{
       href: 'https://www.linkedin.com/in/yyluchkiv'
     },
     {
-      alt: 'Twitter',
-      icon: TwitterMonoIcon,
-      visible: twitterVisible,
-      hoverIcon: TwitterColorIcon,
-      href: 'https://twitter.com/yyluchkiv'
-    },
-    {
-      alt: 'Facebook',
-      icon: FacebookMonoIcon,
-      visible: facebookVisible,
-      hoverIcon: FacebookColorIcon,
-      href: 'https://www.facebook.com/yurii.luchkiv'
-    },
-    {
       alt: 'Youtube',
       icon: YoutubeMonoIcon,
       visible: youtubeVisible,
       hoverIcon: YoutubeColorIcon,
       href: 'https://www.youtube.com/'
-    },
-    {
-      alt: 'Github',
-      icon: GithubMonoIcon,
-      visible: githubVisible,
-      hoverIcon: GithubColorIcon,
-      href: 'https://github.com/yurii-luchkiv'
     },
     {
       alt: 'Gmail',
@@ -129,7 +129,7 @@ const Footer: React.FC<{
       href: 'https://mail.google.com/'
     },
     {
-      alt: 'Dou',
+      alt: 'DOU',
       icon: DouMonoIcon,
       visible: douVisible,
       hoverIcon: DouColorIcon,
