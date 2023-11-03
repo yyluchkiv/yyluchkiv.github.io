@@ -32,6 +32,15 @@
   object-position: center;
 }
 
+.roundedImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
 .swiper {
   position: fixed;
   top: 0;
@@ -103,4 +112,14 @@
 
 .arrowRight:active {
   transform: rotate(180deg) scale(1);
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

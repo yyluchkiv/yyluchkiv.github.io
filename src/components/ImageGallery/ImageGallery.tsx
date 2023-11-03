@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Keyboard, Zoom } from 'swiper/modules'
 import CloseIcon from '@/public/assets/svgs/icons/ImageGallery/Close.svg'
 import ArrowIcon from '@/public/assets/svgs/icons/ImageGallery/Arrow.svg'
+import Loader from '@/src/components/Loader/Loader'
 
 type Orientation = 'v' | 'h'
 type Position = 'l' | 'c' | 'r'
@@ -81,6 +82,7 @@ const ImageGallery: React.FC<{
 }) => {
   const [showPreview, setShowPreview] = useState(false)
   const [initialSlide, setInitialSlide] = useState(0)
+  const [loadedImage, setLoadedImage] = useState(true)
   let isHorizontalOrientation: boolean
   let isVerticalOrientation: boolean
   let galleryHeight: number = height
@@ -237,7 +239,10 @@ const ImageGallery: React.FC<{
   }
 
   function getImageStyle () {
-    return { borderRadius: `${ imageBorderRadius }%` }
+    return {
+      display: loadedImage ? 'none' : 'block',
+      borderRadius: `${ imageBorderRadius }%`
+    }
   }
 
   function openPreview (initialSlideNumber: number) {
@@ -271,16 +276,20 @@ const ImageGallery: React.FC<{
             {
               galleryItem.images.map(image => (
                 <div className={ Styles.container } style={ getImageContainerStyles(image.ratio) } key={ uuId() }>
-                  <Image
-                    onClick={ () => preview && openPreview(image.id - 1) }
-                    className={ Styles.image }
-                    style={ getImageStyle() }
-                    src={ image.source }
-                    alt={ image.alt }
-                    fill={ true }
-                    priority={ true }
-                    sizes='(max-width: 768px) 1200w, (max-width: 1200px) 1000w, 33vw'
-                  />
+                  <div className={ Styles.roundedImage }>
+                    <Loader loading={ loadedImage } />
+                    <Image
+                      onClick={ () => preview && openPreview(image.id - 1) }
+                      className={ Styles.image }
+                      style={ getImageStyle() }
+                      src={ image.source }
+                      alt={ image.alt }
+                      fill={ true }
+                      onLoad={ () => setLoadedImage(false) }
+                      priority={ true }
+                      sizes='(max-width: 768px) 1200w, (max-width: 1200px) 1000w, 33vw'
+                    />
+                  </div>
                 </div>
               ))
             }
