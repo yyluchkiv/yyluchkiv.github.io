@@ -79,7 +79,6 @@ const ImageGallery: React.FC<{
 }) => {
   const [showPreview, setShowPreview] = useState(false)
   const [initialSlide, setInitialSlide] = useState(0)
-  const [loadedImage, setLoadedImage] = useState(true)
   let isHorizontalOrientation: boolean
   let isVerticalOrientation: boolean
   let galleryHeight: number = height
@@ -235,13 +234,6 @@ const ImageGallery: React.FC<{
     return styles
   }
 
-  function getImageStyle () {
-    return {
-      display: loadedImage ? 'none' : 'block',
-      borderRadius: `${ imageBorderRadius }%`
-    }
-  }
-
   function openPreview (initialSlideNumber: number) {
     setShowPreview(true)
     setInitialSlide(initialSlideNumber)
@@ -264,6 +256,34 @@ const ImageGallery: React.FC<{
     }
   }, [showPreview])
 
+  const ImageItem: React.FC<{ image: any }> = ({ image }) => {
+    const [loadedImage, setLoadedImage] = useState(true)
+
+    function getImageStyle () {
+      return {
+        display: loadedImage ? 'none' : 'block',
+        borderRadius: `${ imageBorderRadius }%`
+      }
+    }
+
+    return (
+      <div className={ Styles.roundedImage }>
+        <Loader loading={ loadedImage } />
+        <Image
+          onClick={ () => preview && openPreview(image.id - 1) }
+          className={ Styles.image }
+          style={ getImageStyle() }
+          src={ image.source }
+          alt={ image.alt }
+          fill={ true }
+          onLoad={ () => setLoadedImage(false) }
+          priority={ true }
+          sizes='(max-width: 768px) 1200w, (max-width: 1200px) 1000w, 33vw'
+        />
+      </div>
+    )
+  }
+
   return (
     <div className={ getGalleryCssClass() } style={ getGalleryStyles() }>
       {
@@ -273,20 +293,7 @@ const ImageGallery: React.FC<{
             {
               galleryItem.images.map(image => (
                 <div className={ Styles.container } style={ getImageContainerStyles(image.ratio) } key={ uuId() }>
-                  <div className={ Styles.roundedImage }>
-                    <Loader loading={ loadedImage } />
-                    <Image
-                      onClick={ () => preview && openPreview(image.id - 1) }
-                      className={ Styles.image }
-                      style={ getImageStyle() }
-                      src={ image.source }
-                      alt={ image.alt }
-                      fill={ true }
-                      onLoad={ () => setLoadedImage(false) }
-                      priority={ true }
-                      sizes='(max-width: 768px) 1200w, (max-width: 1200px) 1000w, 33vw'
-                    />
-                  </div>
+                  <ImageItem image={ image } />
                 </div>
               ))
             }
