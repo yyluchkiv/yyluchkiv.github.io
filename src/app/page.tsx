@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Styles from './Home.module.css'
 import IconLink from '@/src/components/Links/IconLink/IconLink'
 import ImageGallery from '@/src/components/ImageGallery/ImageGallery'
@@ -131,6 +132,21 @@ export default function Home() {
           <Badge iconSource={ AmpardIcon } alt='Ampard' link='https://www.crunchbase.com/organization/ampard' />
           <Badge iconSource={ ConscensiaIcon } alt='Conscensia' link='https://conscensia.com/' />
           <Badge iconSource={ SystematicIcon } alt='Systematic' link='https://systematic.com/en-gb/' />
+        </div>
+
+
+        {/*Google Analytics*/}
+        <div className="container">
+          <Script src="https://www.googletagmanager.com/gtag/js?id=G-MGGJJG58LQ" />
+          <Script id="google-analytics">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-MGGJJG58LQ');
+          `}
+          </Script>
         </div>
       </div>
   )
