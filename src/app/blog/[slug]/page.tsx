@@ -69,7 +69,7 @@ export const generateMetadata = ({ params }: { params: any }) => {
     openGraph: {
       title: 'Yurii Luchkiv — ' + post?.title,
       description: post?.summary,
-      siteName: 'Yurii Luchkiv',
+      siteName: `yyluchkiv.com/blog/${post?.url}`,
       url: `https://yyluchkiv.com/blog/${post?.url}`,
       images: [
         {
