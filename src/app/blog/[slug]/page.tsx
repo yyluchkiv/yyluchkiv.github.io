@@ -52,6 +52,20 @@ export const generateMetadata = ({ params }: { params: any }) => {
   return {
     metadataBase: new URL('https://yyluchkiv.com/'),
     title: 'Yurii Luchkiv — ' + post?.title,
+    description: post?.summary,
+    twitter: {
+      title: 'Yurii Luchkiv — ' + post?.title,
+      card: 'summary_large_image',
+      description: post?.summary,
+      images: [
+        {
+          type: "image/png",
+          width: 800,
+          height: 600,
+          url: post?.image ? post?.image : '/assets/pngs/Home/Main.png'
+        }
+      ],
+    },
     openGraph: {
       title: 'Yurii Luchkiv — ' + post?.title,
       description: post?.summary,
