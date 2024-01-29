@@ -129,9 +129,9 @@ export default function Home() {
         <div className={ Styles.badges }>
           <Badge iconSource={ Tech1LargeIcon } alt='Tech1' link='https://tech1.io/' />
           <Badge iconSource={ CiklumIcon } alt='Ciklum' link='https://www.ciklum.com/' />
-          <Badge iconSource={ AmpardIcon } alt='Ampard' link='https://www.crunchbase.com/organization/ampard' />
+          {/*<Badge iconSource={ AmpardIcon } alt='Ampard' link='https://www.crunchbase.com/organization/ampard' />*/}
           <Badge iconSource={ ConscensiaIcon } alt='Conscensia' link='https://conscensia.com/' />
-          <Badge iconSource={ SystematicIcon } alt='Systematic' link='https://systematic.com/en-gb/' />
+          <Badge iconSource={ SystematicIcon } alt='Systematic' link='https://systematic.com/en-gb/industries/defence/products/sitaware-suite/sitaware-headquarters' />
         </div>
 
 

@@ -25,11 +25,13 @@ import TwitterMonoIcon from '@/public/assets/svgs/icons/Footer/Mono/TwitterMono.
 import TwitterColorIcon from '@/public/assets/svgs/icons/Footer/Color/TwitterColor.svg'
 import YoutubeMonoIcon from '@/public/assets/svgs/icons/Footer/Mono/YoutubeMono.svg'
 import YoutubeColorIcon from '@/public/assets/svgs/icons/Footer/Color/YoutubeColor.svg'
+import UpworkMonoIcon from '@/public/assets/svgs/icons/Footer/Mono/UpworkMono.svg'
+import UpworkColorIcon from '@/public/assets/svgs/icons/Footer/Color/UpworkColor.svg'
 
 interface SocialItem {
   alt: string,
-  icon: StaticImageData | string,
   visible: boolean,
+  icon: StaticImageData | string,
   hoverIcon: StaticImageData | string
   href: string
 }
@@ -56,23 +58,25 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
 }
 
 const Footer: React.FC<{
-  instagramVisible?: boolean,
+  githubVisible?: boolean,
+  upworkVisible?: boolean,
   linkedinVisible?: boolean,
+  instagramVisible?: boolean,
   twitterVisible?: boolean,
   facebookVisible?: boolean,
   youtubeVisible?: boolean,
-  githubVisible?: boolean,
   gmailVisible?: boolean,
   douVisible?: boolean,
   behanceVisible?: boolean,
   clutchVisible?: boolean
 }> = ({
-  instagramVisible = true,
+  githubVisible = true,
+  upworkVisible = true,
   linkedinVisible = true,
+  instagramVisible = true,
   twitterVisible = true,
   facebookVisible = true,
   youtubeVisible = false,
-  githubVisible = true,
   gmailVisible = false,
   douVisible = false,
   behanceVisible = false,
@@ -80,72 +84,79 @@ const Footer: React.FC<{
 }) => {
   const socials: SocialItem[] = [
     {
-      alt: 'Twitter',
-      icon: TwitterMonoIcon,
-      visible: twitterVisible,
-      hoverIcon: TwitterColorIcon,
-      href: 'https://twitter.com/yyluchkiv'
-    },
-    {
       alt: 'Github',
-      icon: GithubMonoIcon,
       visible: githubVisible,
+      icon: GithubMonoIcon,
       hoverIcon: GithubColorIcon,
       href: 'https://github.com/yurii-luchkiv'
     },
     {
+      alt: 'Upwork',
+      visible: upworkVisible,
+      icon: UpworkMonoIcon,
+      hoverIcon: UpworkColorIcon,
+      href: 'https://www.upwork.com/freelancers/yyluchkiv'
+    },
+    {
+      alt: 'Linkedin',
+      visible: linkedinVisible,
+      icon: LinkedinMonoIcon,
+      hoverIcon: LinkedinColorIcon,
+      href: 'https://www.linkedin.com/in/yyluchkiv'
+    },
+    {
+      alt: 'Twitter',
+      visible: twitterVisible,
+      icon: TwitterMonoIcon,
+      hoverIcon: TwitterColorIcon,
+      href: 'https://twitter.com/yyluchkiv'
+    },
+    {
       alt: 'Facebook',
-      icon: FacebookMonoIcon,
       visible: facebookVisible,
+      icon: FacebookMonoIcon,
       hoverIcon: FacebookColorIcon,
       href: 'https://www.facebook.com/yurii.luchkiv'
     },
     {
       alt: 'Instagram',
-      icon: InstagramMonoIcon,
       visible: instagramVisible,
+      icon: InstagramMonoIcon,
       hoverIcon: InstagramColorIcon,
       href: 'https://www.instagram.com/yyluchkiv'
     },
     {
-      alt: 'Linkedin',
-      icon: LinkedinMonoIcon,
-      visible: linkedinVisible,
-      hoverIcon: LinkedinColorIcon,
-      href: 'https://www.linkedin.com/in/yyluchkiv'
-    },
-    {
       alt: 'Youtube',
-      icon: YoutubeMonoIcon,
       visible: youtubeVisible,
+      icon: YoutubeMonoIcon,
       hoverIcon: YoutubeColorIcon,
       href: 'https://www.youtube.com/'
     },
     {
       alt: 'Gmail',
-      icon: GmailMonoIcon,
       visible: gmailVisible,
+      icon: GmailMonoIcon,
       hoverIcon: GmailColorIcon,
       href: 'https://mail.google.com/'
     },
     {
       alt: 'DOU',
-      icon: DouMonoIcon,
       visible: douVisible,
+      icon: DouMonoIcon,
       hoverIcon: DouColorIcon,
       href: 'https://dou.ua/'
     },
     {
       alt: 'Behance',
-      icon: BehanceMonoIcon,
       visible: behanceVisible,
+      icon: BehanceMonoIcon,
       hoverIcon: BehanceColorIcon,
       href: 'https://www.behance.net/'
     },
     {
       alt: 'Clutch',
-      icon: ClutchMonoIcon,
       visible: clutchVisible,
+      icon: ClutchMonoIcon,
       hoverIcon: ClutchColorIcon,
       href: 'https://clutch.co/'
     }

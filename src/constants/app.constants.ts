@@ -34,6 +34,10 @@ const applicationConstants: {
       pathName: '/'
     },
     {
+      name: 'tech1',
+      pathName: 'https://tech1.io/'
+    },
+    {
       name: 'blog',
       pathName: '/blog'
     },
@@ -41,10 +45,6 @@ const applicationConstants: {
       name: 'about',
       pathName: '/about',
       hide: true
-    },
-    {
-      name: 'tech1',
-      pathName: 'https://tech1.io/'
     },
     {
       name: 'advanced',
