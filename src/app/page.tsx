@@ -53,8 +53,8 @@ export default function Home() {
           I currently work at <IconLink iconSource={ Tech1SmallIcon } alt='Tech1' text='Tech1' link='https://tech1.io/' />.
           I build apps and deliver ideas to the market using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />&nbsp;
           <IconLink iconSource={ SpringIcon } alt='Spring' text='Spring' link='https://spring.io/projects/spring-framework' />&nbsp;
-          <IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />&nbsp;
-          <IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />&nbsp;
+          {/*<IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />&nbsp;*/}
+          {/*<IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />&nbsp;*/}
           <IconLink iconSource={ VueIcon } alt='Vue.js' text='Vue.js' link='https://vuejs.org/' /> and <IconLink iconSource={ AwsIcon } alt='AWS' text='AWS' link='https://aws.amazon.com/' />.
         </p>
         <div className={ Styles.gallery }>
