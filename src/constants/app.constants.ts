@@ -1,10 +1,10 @@
 import { CategoriesIcons, CategoriesTitles } from '@/src/types/CategoriesTypes'
 import { NavigationTab } from '@/src/types/NavigationTypes'
-import DiaryIcon from '@/public/assets/svgs/icons/Blog/Diary.svg'
-import Tech1Icon from '@/public/assets/svgs/icons/Blog/Tech1.svg'
-import TechnologyIcon from '@/public/assets/svgs/icons/Blog/Technology.svg'
-import TravelIcon from '@/public/assets/svgs/icons/Blog/Travel.svg'
-import UkraineIcon from '@/public/assets/svgs/icons/Blog/Ukraine.svg'
+import DiaryIcon from '@/public/assets/svgs/icons/Posts/Diary.svg'
+import Tech1Icon from '@/public/assets/svgs/icons/Posts/Tech1.svg'
+import TechnologyIcon from '@/public/assets/svgs/icons/Posts/Technology.svg'
+import TravelIcon from '@/public/assets/svgs/icons/Posts/Travel.svg'
+import UkraineIcon from '@/public/assets/svgs/icons/Posts/Ukraine.svg'
 
 const applicationConstants: {
   BLOG_ARTICLE_CATEGORIES: {
@@ -47,11 +47,6 @@ const applicationConstants: {
     {
       name: 'about',
       pathName: '/about',
-      hide: true
-    },
-    {
-      name: 'advanced',
-      pathName: '/advanced',
       hide: true
     }
   ]

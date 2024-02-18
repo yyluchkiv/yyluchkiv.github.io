@@ -9,7 +9,7 @@ import ApplicationConstants from '@/src/constants/app.constants'
 import { CategoriesIcons } from '@/src/types/CategoriesTypes'
 import { useState } from 'react'
 import DateUtility from '@/src/utilities/DateUtility'
-import ArrowIcon from '@/public/assets/svgs/icons/Blog/Arrow.svg'
+import ArrowIcon from '@/public/assets/svgs/icons/Posts/Arrow.svg'
 
 const CategoryImage: React.FC<{ category: string }> = ({ category }) => {
   const [isHovering, setIsHovered] = useState(false)
