@@ -1,6 +1,6 @@
 'use client'
 
-import Styles from './Blog.module.css'
+import Styles from './Posts.module.css'
 import { allPosts } from 'contentlayer/generated'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -41,13 +41,13 @@ export default function Blog () {
   }
 
   return (
-    <div className={ Styles.blog }>
-      <ul className={ Styles.posts }>
+    <div className={ Styles.posts }>
+      <ul className={ Styles.post }>
         { sortedPosts.map(post => {
           if (!post.hide) {
             return (
               <li key={ post.slug }>
-                <Link href={ `blog/${ post.slug }` } className={ Styles.link }>
+                <Link href={ `posts/${ post.slug }` } className={ Styles.link }>
                   <span className={ Styles.postDate }>{ DateUtility.formatArticleDate(post.publishedAt) }</span>
                   <CategoryImage category={ post.category } />
                   <div className={ Styles.postDescription }>

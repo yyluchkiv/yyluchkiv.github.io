@@ -1,4 +1,4 @@
-import Styles from './Article.module.css'
+import Styles from './Post.module.css'
 import { allPosts } from 'contentlayer/generated'
 import ReadingTime from 'reading-time'
 import { useMDXComponent } from 'next-contentlayer/hooks'
@@ -69,8 +69,8 @@ export const generateMetadata = ({ params }: { params: any }) => {
     openGraph: {
       title: 'Yurii Luchkiv — ' + post?.title,
       description: post?.summary,
-      siteName: `yyluchkiv.com/blog/${post?.url}`,
-      url: `https://yyluchkiv.com/blog/${post?.url}`,
+      siteName: `yyluchkiv.com/posts/${post?.url}`,
+      url: `https://yyluchkiv.com/posts/${post?.url}`,
       images: [
         {
           type: "image/png",

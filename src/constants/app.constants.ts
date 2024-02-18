@@ -31,15 +31,18 @@ const applicationConstants: {
   NAVIGATION_TABS: [
     {
       name: 'home',
-      pathName: '/'
+      pathName: '/',
+      hide: false
     },
     {
       name: 'tech1',
-      pathName: 'https://tech1.io/'
+      pathName: 'https://tech1.io/',
+      hide: false
     },
     {
-      name: 'blog',
-      pathName: '/blog'
+      name: 'posts',
+      pathName: '/posts',
+      hide: false
     },
     {
       name: 'about',

@@ -1,4 +1,4 @@
-.blog {
+.posts {
   flex: 1 1 auto;
 }
 
@@ -6,7 +6,7 @@
   margin-bottom: 2rem;
 }
 
-.posts {
+.post {
   display: flex;
   flex-direction: column;
   gap: 10px;

@@ -11,8 +11,8 @@ export default function Navigation () {
   const isArticleHidden = allPosts.find((post) => post.url === params?.slug && post.hide)
   let routePathName: string = usePathname() || '/'
 
-  if (routePathName.includes('/blog/')) {
-    routePathName = '/blog'
+  if (routePathName.includes('/posts/')) {
+    routePathName = '/posts'
   }
 
   if (isArticleHidden) {
