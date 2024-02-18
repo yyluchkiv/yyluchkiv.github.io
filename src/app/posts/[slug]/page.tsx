@@ -102,7 +102,7 @@ export default function Article({ params }: { params: any }) {
   return (
     <section className={ Styles.post }>
       <h1 className={ Styles.title }>{ post.title }</h1>
-      <div className={ Styles.decription }>
+      <div className={ Styles.description }>
         <span>{ DateUtility.formatArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
         <span>{ postStats.text }</span>
       </div>
