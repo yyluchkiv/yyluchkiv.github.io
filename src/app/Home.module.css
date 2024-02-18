@@ -15,9 +15,17 @@
 }
 
 .gallery {
-  margin: 1.25rem 0;
+  margin-top: 1.25rem;
 }
 
 .paragraph {
-  margin-top: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.technologies {
+  list-style: inside none;
+}
+
+.technology {
+
 }
