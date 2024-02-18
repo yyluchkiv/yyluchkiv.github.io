@@ -16,15 +16,15 @@ import CiklumIcon from '@/public/assets/svgs/icons/Home/Ciklum.svg'
 import ConscensiaIcon from '@/public/assets/svgs/icons/Home/Conscensia.svg'
 import SystematicIcon from '@/public/assets/svgs/icons/Home/Systematic.svg'
 
-import Home05 from '@/public/assets/jpgs/Home/05.jpg'
-import Home06 from '@/public/assets/jpgs/Home/06.jpg'
+import Home01 from '@/public/assets/jpgs/Home/01.jpg'
+import Home02 from '@/public/assets/jpgs/Home/02.jpg'
 
-const galleryMiddle = [
+const gallery01 = [
   {
     ratio: 100,
     images: [
       {
-        source: Home05,
+        source: Home01,
         ratio: 100,
         alt: 'Mountains'
       }
@@ -32,12 +32,12 @@ const galleryMiddle = [
   }
 ]
 
-const galleryBottom = [
+const gallery02 = [
   {
     ratio: 100,
     images: [
       {
-        source: Home06,
+        source: Home02,
         ratio: 100,
         alt: 'Mountains'
       }
@@ -67,7 +67,7 @@ export default function Home() {
           Silly me. Then I tried to start a professional career as a software engineer. It worked, and I liked it.
         </p>
         <div className={ Styles.gallery }>
-          <ImageGallery gallery={ galleryMiddle } gap={ 15 } imageBorderRadius={ 2 } orientation={ 'h' } preview={ false } />
+          <ImageGallery gallery={ gallery01 } gap={ 15 } imageBorderRadius={ 2 } orientation={ 'h' } preview={ false } />
         </div>
         <p>
           Right now I want to believe I am a Java-ecosystem software engineer. In the early days of my career,
@@ -79,7 +79,7 @@ export default function Home() {
           Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
         </p>
         <div className={ Styles.gallery }>
-          <ImageGallery gallery={ galleryBottom } gap={ 15 } imageBorderRadius={ 2 } orientation='h' preview={ false } />
+          <ImageGallery gallery={ gallery02 } gap={ 15 } imageBorderRadius={ 2 } orientation='h' preview={ false } />
         </div>
         <p>
           Over the past decade I worked with multiple companies, projects and teams.
