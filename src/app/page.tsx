@@ -13,49 +13,11 @@ import AwsIcon from '@/public/assets/svgs/icons/Home/Aws.svg'
 import SpringIcon from '@/public/assets/svgs/icons/Home/Spring.svg'
 import Tech1LargeIcon from '@/public/assets/svgs/icons/Home/Tech1Large.svg'
 import CiklumIcon from '@/public/assets/svgs/icons/Home/Ciklum.svg'
-import AmpardIcon from '@/public/assets/svgs/icons/Home/Ampard.svg'
 import ConscensiaIcon from '@/public/assets/svgs/icons/Home/Conscensia.svg'
 import SystematicIcon from '@/public/assets/svgs/icons/Home/Systematic.svg'
 
-import Home01 from '@/public/assets/jpgs/Home/01.jpg'
-import Home02 from '@/public/assets/jpgs/Home/02.jpg'
-import Home03 from '@/public/assets/jpgs/Home/03.jpg'
-import Home04 from '@/public/assets/jpgs/Home/04.jpg'
 import Home05 from '@/public/assets/jpgs/Home/05.jpg'
 import Home06 from '@/public/assets/jpgs/Home/06.jpg'
-
-const galleryTop = [
-  {
-    ratio: 50,
-    images: [
-      {
-        source: Home01,
-        ratio: 40,
-        alt: 'JDay Conference'
-      },
-      {
-        source: Home02,
-        ratio: 60,
-        alt: 'SoftServer University'
-      }
-    ]
-  },
-  {
-    ratio: 50,
-    images: [
-      {
-        source: Home03,
-        ratio: 60,
-        alt: 'Tech1'
-      },
-      {
-        source: Home04,
-        ratio: 40,
-        alt: 'Lviv IT School'
-      }
-    ]
-  }
-]
 
 const galleryMiddle = [
   {
@@ -95,11 +57,7 @@ export default function Home() {
           <IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />&nbsp;
           <IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />&nbsp;
           <IconLink iconSource={ VueIcon } alt='Vue.js' text='Vue.js' link='https://vuejs.org/' /> and <IconLink iconSource={ AwsIcon } alt='AWS' text='AWS' link='https://aws.amazon.com/' />.
-          {/*, <IconLink iconSource={ PythonIcon } alt='Python' text='Python' link='https://www.python.org/' />*/}
         </p>
-        <div className={ Styles.gallery }>
-          <ImageGallery gallery={ galleryTop } gap={ 15 } imageBorderRadius={ 2 } preview={ false } />
-        </div>
         <p>
           I have been working in the software development area since 2011.
           When I was young I wasn&apos;t sure I should become a software engineer.
@@ -129,7 +87,6 @@ export default function Home() {
         <div className={ Styles.badges }>
           <Badge iconSource={ Tech1LargeIcon } alt='Tech1' link='https://tech1.io/' />
           <Badge iconSource={ CiklumIcon } alt='Ciklum' link='https://www.ciklum.com/' />
-          {/*<Badge iconSource={ AmpardIcon } alt='Ampard' link='https://www.crunchbase.com/organization/ampard' />*/}
           <Badge iconSource={ ConscensiaIcon } alt='Conscensia' link='https://conscensia.com/' />
           <Badge iconSource={ SystematicIcon } alt='Systematic' link='https://systematic.com/en-gb/industries/defence/products/sitaware-suite/sitaware-headquarters' />
         </div>
