@@ -165,7 +165,7 @@ const Footer: React.FC<{
   return (
       <div className={ Styles.footer }>
         <div className={ Styles.leftSide }>
-          <span className={ Styles.copyright }>© 2019 — { DateUtility.getCurrentYear() } Yurii Luchkiv | v1.1.4</span>
+          <span className={ Styles.copyright }>© 2019 — { DateUtility.getCurrentYear() } Yurii Luchkiv | v1.2.0</span>
         </div>
         <div className={ Styles.rightSide }>
           <ul className={ Styles.socialList }>
