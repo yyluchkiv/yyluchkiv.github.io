@@ -62,7 +62,7 @@ export const generateMetadata = ({ params }: { params: any }) => {
           type: "image/png",
           width: 800,
           height: 600,
-          url: post?.image ? post?.image : '/assets/pngs/Home/Main.png'
+          url: '/assets/pngs/Home/Main-V120.png'
         }
       ],
     },
@@ -76,7 +76,7 @@ export const generateMetadata = ({ params }: { params: any }) => {
           type: "image/png",
           width: 800,
           height: 600,
-          url: post?.image ? post?.image : '/assets/pngs/Home/Main.png'
+          url: '/assets/pngs/Home/Main-V120.png'
         }
       ],
       locale: post?.locale,

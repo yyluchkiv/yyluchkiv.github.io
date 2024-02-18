@@ -40,7 +40,7 @@ export const generateMetadata = () => {
           type: "image/png",
           width: 800,
           height: 600,
-          url: '/assets/pngs/Home/Main.png'
+          url: '/assets/pngs/Home/Main-V120.png'
         }
       ],
     },
@@ -54,7 +54,7 @@ export const generateMetadata = () => {
           type: "image/png",
           width: 800,
           height: 600,
-          url: '/assets/pngs/Home/Main.png'
+          url: '/assets/pngs/Home/Main-V120.png'
         }
       ],
       locale: 'en_US',
