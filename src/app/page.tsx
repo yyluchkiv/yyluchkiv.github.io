@@ -90,13 +90,13 @@ export default function Home() {
         </div>
         <p className={ Styles.paragraph }>
             Technologies that I am experienced in:
-            <ul className={ Styles.technologies }>
-                <li className={ Styles.technology }>— java, spring boot, spring data, apache maven</li>
-                <li className={ Styles.technology }>— ubuntu, docker, docker-compose, github actions, jenkins</li>
-                <li className={ Styles.technology }>— postgres, mongodb</li>
-                <li className={ Styles.technology }>— javascript, vue.js</li>
-            </ul>
         </p>
+        <ul className={ Styles.technologies }>
+            <li className={ Styles.technology }>— java, spring boot, spring data, apache maven</li>
+            <li className={ Styles.technology }>— ubuntu, docker, docker-compose, github actions, jenkins</li>
+            <li className={ Styles.technology }>— postgres, mongodb</li>
+            <li className={ Styles.technology }>— javascript, vue.js</li>
+        </ul>
 
         {/*Google Analytics*/}
         <div className="container">
