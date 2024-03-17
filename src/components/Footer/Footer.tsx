@@ -1,6 +1,7 @@
 'use client'
 
 import Styles from './Footer.module.css'
+import packageJSON from '@/package.json'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -165,7 +166,7 @@ const Footer: React.FC<{
   return (
       <div className={ Styles.footer }>
         <div className={ Styles.leftSide }>
-          <span className={ Styles.copyright }>© 2019 — { DateUtility.getCurrentYear() } Yurii Luchkiv | v1.2.0</span>
+          <span className={ Styles.copyright }>© 2019 — { DateUtility.getCurrentYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
         </div>
         <div className={ Styles.rightSide }>
           <ul className={ Styles.socialList }>
