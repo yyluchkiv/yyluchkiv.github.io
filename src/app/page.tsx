@@ -49,9 +49,10 @@ export default function Home() {
   return (
       <div className={ Styles.home }>
         <p>
-          I am a software engineer (since 2011) and a father (since 2016). As long as I can remember, I have always been curious about how things work.
+          I am a software engineer (since 2011) and a husband (since 2014) and a father (since 2016).
+          As long as I can remember, I have always been curious about how things work.
           I currently work at <IconLink iconSource={ Tech1SmallIcon } alt='Tech1' text='Tech1' link='https://tech1.io/' />.
-          I build apps and deliver ideas to the market using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />&nbsp;
+          I enjoy building apps and delivering ideas to the market using <IconLink iconSource={ JavaIcon } alt='Java' text='Java' link='https://dev.java/' />&nbsp;
           <IconLink iconSource={ SpringIcon } alt='Spring' text='Spring' link='https://spring.io/projects/spring-framework' />&nbsp;
           {/*<IconLink iconSource={ NextIcon } alt='Next.js' text='Next.js' link='https://nextjs.org/' />&nbsp;*/}
           {/*<IconLink iconSource={ ReactIcon } alt='React' text='React' link='https://react.dev/' />&nbsp;*/}
@@ -95,7 +96,7 @@ export default function Home() {
             <li className={ Styles.technology }>— java, spring boot, spring data, apache maven</li>
             <li className={ Styles.technology }>— ubuntu, docker, docker-compose, github actions, jenkins</li>
             <li className={ Styles.technology }>— postgres, mongodb</li>
-            <li className={ Styles.technology }>— javascript, vue.js</li>
+            <li className={ Styles.technology }>— javascript, typescript, vue.js</li>
         </ul>
 
         {/*Google Analytics*/}
