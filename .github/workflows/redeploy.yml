@@ -1,4 +1,4 @@
-name: nextjs
+name: redeploy-pages
 
 on:
   workflow_dispatch:

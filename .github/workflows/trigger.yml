@@ -1,4 +1,4 @@
-name: nextjs
+name: trigger
 
 on:
   push:
