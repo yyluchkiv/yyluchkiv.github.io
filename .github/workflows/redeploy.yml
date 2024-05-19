@@ -1,4 +1,4 @@
-name: redeploy-pages
+name: redeploy
 
 on:
   workflow_dispatch:
