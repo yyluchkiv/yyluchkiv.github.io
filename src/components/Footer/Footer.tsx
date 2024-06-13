@@ -59,26 +59,26 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
 }
 
 const Footer: React.FC<{
+  gmailVisible?: boolean,
   githubVisible?: boolean,
   upworkVisible?: boolean,
+  twitterVisible?: boolean,
   linkedinVisible?: boolean,
   instagramVisible?: boolean,
-  twitterVisible?: boolean,
   facebookVisible?: boolean,
   youtubeVisible?: boolean,
-  gmailVisible?: boolean,
   douVisible?: boolean,
   behanceVisible?: boolean,
   clutchVisible?: boolean
 }> = ({
+  gmailVisible = true,
   githubVisible = true,
   upworkVisible = true,
+  twitterVisible = true,
   linkedinVisible = true,
   instagramVisible = true,
-  twitterVisible = true,
   facebookVisible = true,
   youtubeVisible = false,
-  gmailVisible = false,
   douVisible = false,
   behanceVisible = false,
   clutchVisible = false
@@ -92,18 +92,18 @@ const Footer: React.FC<{
       href: 'https://github.com/yurii-luchkiv'
     },
     {
+      alt: 'Gmail',
+      visible: gmailVisible,
+      icon: GmailMonoIcon,
+      hoverIcon: GmailColorIcon,
+      href: 'mailto:yyluchkiv@gmail.com'
+    },
+    {
       alt: 'Upwork',
       visible: upworkVisible,
       icon: UpworkMonoIcon,
       hoverIcon: UpworkColorIcon,
       href: 'https://www.upwork.com/freelancers/yyluchkiv'
-    },
-    {
-      alt: 'Linkedin',
-      visible: linkedinVisible,
-      icon: LinkedinMonoIcon,
-      hoverIcon: LinkedinColorIcon,
-      href: 'https://www.linkedin.com/in/yyluchkiv'
     },
     {
       alt: 'Twitter',
@@ -113,11 +113,18 @@ const Footer: React.FC<{
       href: 'https://twitter.com/yyluchkiv'
     },
     {
+      alt: 'Linkedin',
+      visible: linkedinVisible,
+      icon: LinkedinMonoIcon,
+      hoverIcon: LinkedinColorIcon,
+      href: 'https://www.linkedin.com/in/yyluchkiv'
+    },
+    {
       alt: 'Facebook',
       visible: facebookVisible,
       icon: FacebookMonoIcon,
       hoverIcon: FacebookColorIcon,
-      href: 'https://www.facebook.com/yurii.luchkiv'
+      href: 'https://www.facebook.com/yyluchkiv'
     },
     {
       alt: 'Instagram',
@@ -132,13 +139,6 @@ const Footer: React.FC<{
       icon: YoutubeMonoIcon,
       hoverIcon: YoutubeColorIcon,
       href: 'https://www.youtube.com/'
-    },
-    {
-      alt: 'Gmail',
-      visible: gmailVisible,
-      icon: GmailMonoIcon,
-      hoverIcon: GmailColorIcon,
-      href: 'https://mail.google.com/'
     },
     {
       alt: 'DOU',
