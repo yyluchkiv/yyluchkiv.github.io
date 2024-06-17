@@ -89,7 +89,7 @@ const Footer: React.FC<{
       visible: githubVisible,
       icon: GithubMonoIcon,
       hoverIcon: GithubColorIcon,
-      href: 'https://github.com/yurii-luchkiv'
+      href: 'https://github.com/yyluchkiv'
     },
     {
       alt: 'Gmail',
