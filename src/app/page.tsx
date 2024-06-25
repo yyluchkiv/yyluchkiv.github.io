@@ -41,7 +41,7 @@ export default function Home() {
         I am a software engineer (since 2011) and a husband (since 2014) and a father (since 2016).
         As long as I can remember, I have always been curious about how things work.
         I currently work at <IconLink iconSource={Tech1SmallIcon} alt='Tech1' text='Tech1' link='https://tech1.io/'/>.
-        I enjoy building apps and delivering ideas to the market using.
+        I enjoy building apps and delivering ideas to the market.
       </p>
       <div className={Styles.gallery}>
         <ImageGallery gallery={gallery01} gap={15} imageBorderRadius={2} orientation={'h'} preview={false}/>
