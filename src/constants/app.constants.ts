@@ -35,11 +35,6 @@ const applicationConstants: {
       hide: false
     },
     {
-      name: 'tech1',
-      pathName: 'https://tech1.io/',
-      hide: false
-    },
-    {
       name: 'posts',
       pathName: '/posts',
       hide: true
@@ -47,7 +42,7 @@ const applicationConstants: {
     {
       name: 'about',
       pathName: '/about',
-      hide: true
+      hide: false
     }
   ]
 }
