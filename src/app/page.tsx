@@ -1,10 +1,6 @@
 import Script from "next/script";
 import Styles from './Home.module.css'
-import IconLink from '@/src/components/Links/IconLink/IconLink'
 import ImageGallery from '@/src/components/ImageGallery/ImageGallery'
-
-import Tech1SmallIcon from '@/public/assets/svgs/icons/Home/Tech1Small.svg'
-
 import Home01 from '@/public/assets/jpgs/Home/01.jpg'
 import Home02 from '@/public/assets/jpgs/Home/02.jpg'
 
@@ -40,7 +36,7 @@ export default function Home() {
       <p>
         I am a software engineer (since 2011) and a husband (since 2014) and a father (since 2016).
         As long as I can remember, I have always been curious about how things work.
-        I currently work at <IconLink iconSource={Tech1SmallIcon} alt='Tech1' text='Tech1' link='https://tech1.io/'/>.
+        I currently work at Tech1.
         I enjoy building apps and delivering ideas to the market.
       </p>
       <div className={Styles.gallery}>
