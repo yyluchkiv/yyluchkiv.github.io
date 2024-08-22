@@ -183,6 +183,24 @@ article hr {
   line-height: 49px;
 }
 
+.any-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.any-page p:first-child {
+  margin-top: 0;
+}
+
+.any-page-gallery {
+  margin-top: 1.25rem;
+}
+
+.any-page-paragraph {
+  margin-top: 1.25rem;
+}
+
+
 @media (max-width: 768px) {
   body {
     padding: 0 1.25rem;
