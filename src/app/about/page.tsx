@@ -41,9 +41,9 @@ export default function About () {
       <p className="any-page-paragraph">
         Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
       </p>
-      <div className="any-page-gallery">
+      <p className="any-page-gallery">
         <ImageGallery gallery={Gallery} gap={15} imageBorderRadius={2} orientation={'h'} preview={false}/>
-      </div>
+      </p>
       <p className="any-page-paragraph">
         That&apos;s all Folks 🙃
       </p>

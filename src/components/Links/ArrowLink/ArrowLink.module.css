@@ -1,9 +1,8 @@
 .link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: inline;
   color: rgb(212, 212, 212);
   transition: filter 0.3s linear;
+  text-decoration: underline;
 }
 
 .link:hover {
@@ -11,5 +10,6 @@
 }
 
 .text {
-  height: 1.75rem;
+  display: inline;
+  margin-left: 0.25rem;
 }

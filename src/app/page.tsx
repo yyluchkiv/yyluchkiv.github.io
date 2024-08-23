@@ -10,23 +10,18 @@ export default function Home() {
       <p className="any-page-paragraph">
         I am Yurii Luchkiv
       </p>
-      <p className="any-page-paragraph">
+      <div className="any-page-paragraph">
         <p>→ 💻 I am a software engineer</p>
         <p>→ ⏳ I have been a software engineer since 2011</p>
         <p>→ 🏁 I plan to continue to be a software engineer</p>
-      </p>
+      </div>
       <p className="any-page-paragraph">
         What do I do?
       </p>
-      <p className="any-page-paragraph">
-        <p>→ I build apps here <a href="/apps">HERE</a></p>
-        <p>→ I build apps here <ArrowLink link={"/apps"} text={"HERE"}</p>
-        <p>→ ⏳ I have been a software engineer since 2011</p>
-        <p>→ 🏁 I plan to continue to be a software engineer</p>
-      </p>
-      <br/>
-      <br/>
-      <br/>
+      <div className="any-page-paragraph">
+        <p>→ I build apps <ArrowLink link={"/apps"} text={"HERE"}/></p>
+        <p>→ I provide services <ArrowLink link={"https://tech1.io/"} text={"HERE"}/></p>
+      </div>
       <p className="any-page-paragraph">
         That&apos;s all Folks 🙃
       </p>
