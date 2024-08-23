@@ -11,10 +11,10 @@ export default function About () {
         wife to check this&quot;.
       </p>
       <p className="any-page-paragraph">
-        <ArrowLink link={"https://dadapp.app/"} text={"Download on App Store"} imageVisible={false}/>
+        <ArrowLink link={"https://dadapp.app/"} text={"App Store"} imageVisible={false}/>
       </p>
       <p className="any-page-paragraph">
-        <ArrowLink link={"https://dadapp.app/"} text={"Download on Google Play"} imageVisible={false}/>
+        <ArrowLink link={"https://dadapp.app/"} text={"Google Play"} imageVisible={false}/>
       </p>
       <br/>
       <hr/>
