@@ -35,6 +35,11 @@ const applicationConstants: {
       hide: false
     },
     {
+      name: 'apps',
+      pathName: '/apps',
+      hide: false
+    },
+    {
       name: 'posts',
       pathName: '/posts',
       hide: true
