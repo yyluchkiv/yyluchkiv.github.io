@@ -4,7 +4,7 @@ import ArrowLink from "@/src/components/Links/ArrowLink/ArrowLink";
 export default function Home() {
   return (
     <div className="any-page">
-      <p className="any-page-paragraph">
+      <p>
         👋 Hi
       </p>
       <p className="any-page-paragraph">
@@ -19,8 +19,8 @@ export default function Home() {
         What do I do?
       </p>
       <div className="any-page-paragraph">
-        <p>→ I build apps <ArrowLink link={"/apps"} text={"HERE"}/></p>
         <p>→ I provide services <ArrowLink link={"https://tech1.io/"} text={"HERE"}/></p>
+        <p>→ I build apps <ArrowLink link={"/apps"} text={"HERE"}/></p>
       </div>
       <p className="any-page-paragraph">
         That&apos;s all Folks 🙃
