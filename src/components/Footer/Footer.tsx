@@ -54,13 +54,6 @@ const Footer: React.FC = () => {
       href: 'https://github.com/yyluchkiv'
     },
     {
-      alt: 'Upwork',
-      visible: true,
-      icon: UpworkMonoIcon,
-      hoverIcon: UpworkColorIcon,
-      href: 'https://www.upwork.com/freelancers/yyluchkiv'
-    },
-    {
       alt: 'Twitter',
       visible: true,
       icon: TwitterMonoIcon,
@@ -73,6 +66,13 @@ const Footer: React.FC = () => {
       icon: YoutubeMonoIcon,
       hoverIcon: YoutubeColorIcon,
       href: 'https://www.youtube.com/'
+    },
+    {
+      alt: 'Upwork',
+      visible: true,
+      icon: UpworkMonoIcon,
+      hoverIcon: UpworkColorIcon,
+      href: 'https://www.upwork.com/freelancers/yyluchkiv'
     }
   ]
 
