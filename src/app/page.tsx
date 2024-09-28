@@ -19,7 +19,7 @@ export default function Home() {
         What do I do?
       </p>
       <div className="any-page-paragraph">
-        <p>→ I provide services <ArrowLink link={"https://tech1.io/"} text={"HERE"}/></p>
+        <p>→ I provide services <ArrowLink link={"https://tech1.agency"} text={"HERE"}/></p>
         <p>→ I build apps <ArrowLink link={"/apps"} text={"HERE"}/></p>
       </div>
       <p className="any-page-paragraph">
