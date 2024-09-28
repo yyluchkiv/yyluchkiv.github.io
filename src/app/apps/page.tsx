@@ -38,7 +38,7 @@ export default function About () {
       <br/>
       <br/>
       <p className="any-page-paragraph">
-        ...and many FAILED 🙃
+        ...and many are FAILED 🙃
       </p>
     </div>
   )

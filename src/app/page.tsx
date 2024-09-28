@@ -1,9 +1,27 @@
 import Script from "next/script";
 import ArrowLink from "@/src/components/Links/ArrowLink/ArrowLink";
+import ImageGallery from "@/src/components/ImageGallery/ImageGallery";
+import Avatar from "@/public/assets/pngs/avatar.png";
+
+const Gallery = [
+  {
+    ratio: 100,
+    images: [
+      {
+        source: Avatar,
+        ratio: 100,
+        alt: 'Avatar'
+      }
+    ]
+  }
+]
 
 export default function Home() {
   return (
     <div className="any-page">
+      {/*<p className="any-page-gallery">*/}
+      {/*  <ImageGallery gallery={Gallery} gap={15} imageBorderRadius={2} orientation={'h'} preview={false}/>*/}
+      {/*</p>*/}
       <p>
         👋 Hi
       </p>
