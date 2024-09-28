@@ -20,10 +20,25 @@ export default function About () {
       {/*<hr/>*/}
       {/*<br/>*/}
       <p className="any-page-paragraph">
-        <ArrowLink link={"https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en"} text={"password generator"} imageVisible={true}/>
+        <ArrowLink
+          link={"https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en"}
+          text={"password generator"} imageVisible={true}/>
       </p>
       <p className="any-page-paragraph">
         Chrome Extension: Password Generator - simple, secure, one-click password generator
+      </p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <p className="any-page-paragraph">
+        ...some are IN PROGRESS
+      </p><br/>
+      <br/>
+      <br/>
+      <br/>
+      <p className="any-page-paragraph">
+        ...and many FAILED 🙃
       </p>
     </div>
   )
