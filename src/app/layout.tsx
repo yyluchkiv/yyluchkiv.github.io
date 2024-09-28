@@ -1,30 +1,13 @@
-import LocalFont from 'next/font/local'
+import {Roboto_Mono} from 'next/font/google'
 import '@/src/app/global.css'
 import Navigation from '@/src/components/Navigation/Navigation'
 import Footer from '@/src/components/Footer/Footer'
 import CookieConsent from '@/src/components/CookieConsent/CookieConsent'
 
-export const graphik = LocalFont({
-  src: [
-    {
-      path: '../../public/assets/fonts/GraphikLight.otf',
-      weight: '200',
-      style: 'lighter',
-    },
-    {
-      path: '../../public/assets/fonts/GraphikRegular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/assets/fonts/GraphikMedium.otf',
-      weight: '600',
-      style: 'bold',
-    },
-  ],
-  variable: '--font-graphik',
-  display: 'swap',
-});
+const appFont = Roboto_Mono({
+  weight: '300',
+  subsets: ['latin']
+})
 
 export const generateMetadata = () => {
   return {
@@ -67,14 +50,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body>
-        <header className={ graphik.className }>
+        <header className={ appFont.className }>
           <Navigation />
         </header>
-        <main className={ graphik.className }>{ children }</main>
-        <footer className={ graphik.className }>
+        <main className={ appFont.className }>{ children }</main>
+        <footer className={ appFont.className }>
           <Footer />
         </footer>
-        <CookieConsent localFont={ graphik } />
+        <CookieConsent localFont={ appFont } />
       </body>
     </html>
   )

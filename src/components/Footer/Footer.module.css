@@ -19,6 +19,7 @@
 .socialLink {
   position: relative;
   display: flex;
+  margin-right: 8px;
 }
 
 .icon {

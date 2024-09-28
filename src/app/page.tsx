@@ -1,34 +1,16 @@
 import Script from "next/script";
-import Styles from './Home.module.css'
-import IconLink from '@/src/components/Links/IconLink/IconLink'
-import ImageGallery from '@/src/components/ImageGallery/ImageGallery'
+import ArrowLink from "@/src/components/Links/ArrowLink/ArrowLink";
+import ImageGallery from "@/src/components/ImageGallery/ImageGallery";
+import Avatar from "@/public/assets/pngs/avatar.png";
 
-import Tech1SmallIcon from '@/public/assets/svgs/icons/Home/Tech1Small.svg'
-
-import Home01 from '@/public/assets/jpgs/Home/01.jpg'
-import Home02 from '@/public/assets/jpgs/Home/02.jpg'
-
-const gallery01 = [
+const Gallery = [
   {
     ratio: 100,
     images: [
       {
-        source: Home01,
+        source: Avatar,
         ratio: 100,
-        alt: 'Mountains'
-      }
-    ]
-  }
-]
-
-const gallery02 = [
-  {
-    ratio: 100,
-    images: [
-      {
-        source: Home02,
-        ratio: 100,
-        alt: 'Mountains'
+        alt: 'Avatar'
       }
     ]
   }
@@ -36,39 +18,29 @@ const gallery02 = [
 
 export default function Home() {
   return (
-    <div className={Styles.home}>
+    <div className="any-page">
+      {/*<p className="any-page-gallery">*/}
+      {/*  <ImageGallery gallery={Gallery} gap={15} imageBorderRadius={2} orientation={'h'} preview={false}/>*/}
+      {/*</p>*/}
       <p>
-        I am a software engineer (since 2011) and a husband (since 2014) and a father (since 2016).
-        As long as I can remember, I have always been curious about how things work.
-        I currently work at <IconLink iconSource={Tech1SmallIcon} alt='Tech1' text='Tech1' link='https://tech1.io/'/>.
-        I enjoy building apps and delivering ideas to the market.
+        👋 Hi
       </p>
-      <div className={Styles.gallery}>
-        <ImageGallery gallery={gallery01} gap={15} imageBorderRadius={2} orientation={'h'} preview={false}/>
+      <p className="any-page-paragraph">
+        I am Yurii Luchkiv
+      </p>
+      <div className="any-page-paragraph">
+        <p>→ 💻 I am a software engineer</p>
+        <p>→ ⏳ I have been a software engineer since 2011</p>
+        <p>→ 🏁 I plan to continue to be a software engineer</p>
       </div>
-      <p className={Styles.paragraph}>
-        When I was young I wasn&apos;t sure I should become a software engineer.
-        However, I started my professional education when I was 12 years old in Lviv Physics and
-        Mathematics Lyceum and completed it at the age of 21 in the Applied Mathematics and Informatics department at
-        Lviv Ivan Franko National University.
-        I had some viable options in the non-software development area (or at least I thought they were viable at that
-        time).
-        But then I tried to start a professional career as a software engineer. It worked, and I liked it.
+      <p className="any-page-paragraph">
+        What do I do?
       </p>
-      <p className={Styles.paragraph}>
-        Right now I am a mostly Java software engineer.
-        In the early days of my career, I wanted to be a full-stack developer to be able to complete apps individually.
-        Or at least in the early stages.
-        Later on, I understood that to be a really good full-stack developer you need to be a backend developer during
-        your work time and be a frontend developer in your spare time.
-      </p>
-      <p className={Styles.paragraph}>
-        Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
-      </p>
-      <div className={Styles.gallery}>
-        <ImageGallery gallery={gallery02} gap={15} imageBorderRadius={2} orientation='h' preview={false}/>
+      <div className="any-page-paragraph">
+        <p>→ I provide services <ArrowLink link={"https://tech1.agency"} text={"HERE"}/></p>
+        <p>→ I build apps <ArrowLink link={"/apps"} text={"HERE"}/></p>
       </div>
-      <p className={Styles.paragraph}>
+      <p className="any-page-paragraph">
         That&apos;s all Folks 🙃
       </p>
 

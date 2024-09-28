@@ -1,13 +1,13 @@
 'use client'
 
 import Styles from './CookieConsent.module.css'
-import { NextFontWithVariable } from 'next/dist/compiled/@next/font'
-import { hasCookie, setCookie } from 'cookies-next'
-import React, { useEffect, useState } from 'react'
+import {NextFont} from 'next/dist/compiled/@next/font'
+import {hasCookie, setCookie} from 'cookies-next'
+import React, {useEffect, useState} from 'react'
 import Image from 'next/image'
 import CookiesIcon from '@/public/assets/svgs/icons/CookieConsent/cookies.svg'
 
-const CookieConsent: React.FC<{ localFont: NextFontWithVariable }> = ({ localFont }) => {
+const CookieConsent: React.FC<{ localFont: NextFont }> = ({ localFont }) => {
   const [showConsent, setShowConsent] = useState(true)
   const cookieName = 'cookiesAccepted'
 
