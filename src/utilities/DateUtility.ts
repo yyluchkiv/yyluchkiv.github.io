@@ -5,9 +5,6 @@ const DateUtility = {
     const dayNumber = arrayDate[2]
     const year = arrayDate[3]
     return `${ month } ${ dayNumber }, ${ year }`
-  },
-  getCurrentYear() {
-    return new Date().getFullYear()
   }
 }
 

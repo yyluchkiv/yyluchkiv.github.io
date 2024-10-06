@@ -18,7 +18,7 @@ export default function About () {
   return (
     <div className="any-page">
       <p>
-        I am a software engineer (since 2011) and a husband (since 2014) and a father (since 2016).
+        I am a software engineer (since 2011) and a husband (since 2014) and a father (2016, 2019, 2024).
         As long as I can remember, I have always been curious about how things work.
         I enjoy building apps and delivering ideas to the market.
       </p>

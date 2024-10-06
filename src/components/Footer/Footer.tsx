@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
   return (
       <div className={ Styles.footer }>
         <div className={ Styles.leftSide }>
-          <span className={ Styles.copyright }>© 2019 — { DateUtility.getCurrentYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
+          <span className={ Styles.copyright }>© 2019 — { new Date().getFullYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
         </div>
         <div className={ Styles.rightSide }>
           <ul className={ Styles.socialList }>
