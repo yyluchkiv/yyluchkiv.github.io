@@ -1,5 +1,6 @@
 .navigation {
-  height: var(--navigation-height);
+  display: flex;
+  justify-content: center;
   margin-top: var(--navigation-margin-top);
 }
 
@@ -28,8 +29,8 @@
 }
 
 .active {
-  color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  color: #252525;
+  border-bottom: 1px solid #252525;
   border-radius: 2px;
 }
 

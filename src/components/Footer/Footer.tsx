@@ -81,11 +81,6 @@ const Footer: React.FC = () => {
         <div className={ Styles.leftSide }>
           <span className={ Styles.copyright }>© 2019 — { new Date().getFullYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
         </div>
-        <div className={ Styles.rightSide }>
-          <ul className={ Styles.socialList }>
-            { socials.map(socialItem => socialItem.visible && <SocialLink socialItem={ socialItem } key={ socialItem.alt } />) }
-          </ul>
-        </div>
       </div>
   )
 }

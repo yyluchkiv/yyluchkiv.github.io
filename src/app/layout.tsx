@@ -5,7 +5,7 @@ import Footer from '@/src/components/Footer/Footer'
 import CookieConsent from '@/src/components/CookieConsent/CookieConsent'
 
 const appFont = Roboto_Mono({
-  weight: '300',
+  weight: '400',
   subsets: ['latin']
 })
 
