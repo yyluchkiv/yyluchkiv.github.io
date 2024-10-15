@@ -1,11 +1,9 @@
 'use client'
 
 import Script from "next/script";
-import ArrowLink from "@/src/components/Links/ArrowLink/ArrowLink";
-import ImageGallery from "@/src/components/ImageGallery/ImageGallery";
 import Avatar from "@/public/assets/pngs/avatar.png";
 import RoundedImage from "@/src/components/RoundedImage/RoundedImage";
-import {Outfit, Roboto_Mono} from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import GithubMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/GithubMono.svg";
 import GithubColorIcon from "@/public/assets/svgs/icons/Footer/Color/GithubColor.svg";
 import TwitterMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/TwitterMono.svg";
@@ -18,19 +16,6 @@ import Image, {StaticImageData} from "next/image";
 import Styles from "@/src/components/Footer/Footer.module.css";
 import { useState } from "react";
 import Link from "next/link";
-
-const Gallery = [
-  {
-    ratio: 100,
-    images: [
-      {
-        source: Avatar,
-        ratio: 100,
-        alt: 'Avatar'
-      }
-    ]
-  }
-]
 
 const titleFont = Outfit({
     weight: ['400', '700'],
