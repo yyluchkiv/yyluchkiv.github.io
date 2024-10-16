@@ -14,15 +14,15 @@ export const generateMetadata = () => {
   return {
     metadataBase: new URL('https://yyluchkiv.com'),
     title: 'Yurii Luchkiv | Software Engineer',
-    description: 'Code hard. Work hard. Spend time with your family',
+    description: 'I’ve been a software engineer since 2011 and spent the last ten years building a software development agency. Starting in 2024, I want to realize my ideas and potential. My focus is on building apps and supporting my wife and three children.',
     twitter: {
       title: 'Yurii Luchkiv | Software Engineer',
       card: 'summary_large_image',
-      description: 'Code hard. Work hard. Spend time with your family'
+      description: 'I’ve been a software engineer since 2011 and spent the last ten years building a software development agency. Starting in 2024, I want to realize my ideas and potential. My focus is on building apps and supporting my wife and three children.'
     },
     openGraph: {
       title: 'Yurii Luchkiv | Software Engineer',
-      description: 'Code hard. Work hard. Spend time with your family',
+      description: 'I’ve been a software engineer since 2011 and spent the last ten years building a software development agency. Starting in 2024, I want to realize my ideas and potential. My focus is on building apps and supporting my wife and three children.',
       siteName: 'yyluchkiv.com',
       url: 'https://yyluchkiv.com',
       locale: 'en_US',
