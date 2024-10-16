@@ -16,7 +16,7 @@ const Gallery = [
 
 export default function About () {
   return (
-    <div className="any-page">
+    <div className="page-container about">
       <p>
         I am a software engineer (since 2011) and a husband (since 2014) and a father (2016, 2019, 2024).
         As long as I can remember, I have always been curious about how things work.
@@ -41,9 +41,9 @@ export default function About () {
       <p className="any-page-paragraph">
         Overall, I like working closely with decision-makers, teaching and mentoring young people in our industry.
       </p>
-      <p className="any-page-gallery">
+      <div className="any-page-gallery">
         <ImageGallery gallery={Gallery} gap={15} imageBorderRadius={2} orientation={'h'} preview={false}/>
-      </p>
+      </div>
       <p className="any-page-paragraph">
         That&apos;s all Folks 🙃
       </p>

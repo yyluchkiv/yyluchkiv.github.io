@@ -3,42 +3,6 @@
   justify-content: center;
 }
 
-@media (max-width: 600px) {
-  .roundedImage {
-    min-height: 370px;
-  }
-}
-
-@media (max-width: 550px) {
-  .roundedImage {
-    min-height: 350px;
-  }
-}
-
-@media (max-width: 500px) {
-  .roundedImage {
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 450px) {
-  .roundedImage {
-    min-height: 270px;
-  }
-}
-
-@media (max-width: 400px) {
-  .roundedImage {
-    min-height: 250px;
-  }
-}
-
-@media (max-width: 370px) {
-  .roundedImage {
-    min-height: 220px;
-  }
-}
-
 @media (max-width: 320px) {
   .roundedImage {
     min-height: 180px;
