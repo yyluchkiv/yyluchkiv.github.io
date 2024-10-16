@@ -1,4 +1,4 @@
-import {Outfit, Roboto_Mono} from "next/font/google";
+import { Outfit, Roboto_Mono } from "next/font/google";
 
 const titleFont = Outfit({
     weight: ['400', '700'],
