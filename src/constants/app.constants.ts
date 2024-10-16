@@ -42,7 +42,7 @@ const applicationConstants: {
     {
       name: 'posts',
       pathName: '/posts',
-      hide: false
+      hide: true
     },
     {
       name: 'about',

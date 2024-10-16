@@ -48,7 +48,7 @@ export default function Blog () {
             return (
               <li key={ post.slug } className="app-card">
                 <Link href={ `posts/${ post.slug }` } className={ Styles.link }>
-                  <span className={ Styles.postDate }>{ DateUtility.formatArticleDate(post.publishedAt) }</span>
+                  <span className={ Styles.postDate }>{ DateUtility.getArticleDate(post.publishedAt) }</span>
                   <CategoryImage category={ post.category } />
                   <div className={ Styles.postDescription }>
                     <span className={ Styles.postTitle }>{ post.title }</span>

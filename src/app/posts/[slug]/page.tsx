@@ -93,7 +93,7 @@ export default function Article({ params }: { params: any }) {
     <section className="page-container">
       <h3 className={`${titleFont.className} app-card-title`}>{ post.title }</h3>
       <div className={ Styles.description }>
-        <span className="date">{ DateUtility.formatArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
+        <span className="date">{ DateUtility.getArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
         <span className="details">{ postStats.text }</span>
       </div>
       <Mdx code={ post.body.code } />

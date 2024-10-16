@@ -1,5 +1,5 @@
 const DateUtility = {
-  formatArticleDate (date: string) {
+  getArticleDate (date: string) {
     const arrayDate = String(new Date(date)).split(' ')
     const month = arrayDate[1]
     const dayNumber = arrayDate[2]

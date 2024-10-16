@@ -25,16 +25,19 @@ export default function About () {
       {/*<br/>*/}
       {/*<hr/>*/}
       {/*<br/>*/}
-        <div className="app-card">
-            <h3 className={`${titleFont.className} app-card-title`}>Chrome Extension: Password Generator</h3>
-            <p>simple, secure, one-click password generator</p>
-            <a className="link" target={'_blank'} href={"https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en"}>→ password generator</a>
-        </div>
-        <div className="app-card">
-            ...some are IN PROGRESS
-        </div>
-        <div className="app-card">
-            ...and many are FAILED 🙃
+      <div className="app-card">
+        <h3 className={`${titleFont.className} app-card-title`}>DadApp</h3>
+        <p>mobile app to securely store family data</p>
+        <a className="link" target={'_blank'}
+           href={"https://dadapp.app"}>→
+          dadapp.app</a>
+      </div>
+      <div className="app-card">
+        <h3 className={`${titleFont.className} app-card-title`}>Password Generator</h3>
+        <p>simple, secure, one-click chrome extension</p>
+        <a className="link" target={'_blank'}
+           href={"https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en"}>→
+          password generator</a>
       </div>
     </div>
   )
