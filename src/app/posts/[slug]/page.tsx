@@ -62,29 +62,13 @@ export const generateMetadata = ({ params }: { params: any }) => {
     twitter: {
       title: 'Yurii Luchkiv — ' + post?.title,
       card: 'summary_large_image',
-      description: post?.summary,
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
+      description: post?.summary
     },
     openGraph: {
       title: 'Yurii Luchkiv — ' + post?.title,
       description: post?.summary,
       siteName: `yyluchkiv.com/posts/${post?.url}`,
       url: `https://yyluchkiv.com/posts/${post?.url}`,
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
       locale: post?.locale,
       type: 'article',
     }

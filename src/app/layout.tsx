@@ -18,29 +18,13 @@ export const generateMetadata = () => {
     twitter: {
       title: 'Yurii Luchkiv',
       card: 'summary_large_image',
-      description: 'Code hard. Work hard. Spend time with your family',
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
+      description: 'Code hard. Work hard. Spend time with your family'
     },
     openGraph: {
       title: 'Yurii Luchkiv',
       description: 'Code hard. Work hard. Spend time with your family',
       siteName: 'yyluchkiv.com/',
       url: 'https://yyluchkiv.com/',
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
       locale: 'en_US',
       type: 'website',
     }
