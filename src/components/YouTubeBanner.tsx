@@ -1,5 +1,3 @@
-import Styles from './YouTubeBanner.module.css'
-import LinksStyles from '../Links.module.css'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import ArrowIcon from '@/public/assets/svgs/icons/Links/Arrow.svg'
@@ -27,17 +25,17 @@ function YouTubeIcon() {
 
 const YouTubeBanner: React.FC<{img: StaticImageData, link: string, name: string, subscribers: string}> = ({ img, link, name, subscribers }) => {
   return (
-    <Link href={ link } target="_blank" className={ `${ LinksStyles.linkWithBackground } ${ LinksStyles.container }` }>
-      <div className={ Styles.content }>
-        <div className={ Styles.imageConteiner }>
-          <Image alt={ name } src={ img } height={ 64 } width={ 64 } sizes="33vw" className={ Styles.image } />
-          <div className={ Styles.icon }>
+    <Link href={ link } target="_blank" className={ `linkWithBackground container` }>
+      <div className="content">
+        <div className="imageConteiner">
+          <Image alt={ name } src={ img } height={ 64 } width={ 64 } sizes="33vw" className="image" />
+          <div className="icon">
             <YouTubeIcon />
           </div>
         </div>
-        <div className={ Styles.information }>
-          <span className={ LinksStyles.name }>{ name }</span>
-          <span className={ LinksStyles.subscribers }>{ subscribers } subscribers</span>
+        <div className="information">
+          <span className="name">{ name }</span>
+          <span className="subscribers">{ subscribers } subscribers</span>
         </div>
       </div>
       <div>

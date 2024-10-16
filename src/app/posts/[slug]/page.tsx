@@ -3,12 +3,18 @@ import { allPosts } from 'contentlayer/generated'
 import ReadingTime from 'reading-time'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Link from 'next/link'
-import ImageGallery from '@/src/components/ImageGallery/ImageGallery'
-import TweetBadge from '@/src/components/TweetBadge/TweetBadge'
+import ImageGallery from '@/src/components/ImageGallery'
+import TweetBadge from '@/src/components/TweetBadge'
 import DateUtility from '@/src/utilities/DateUtility'
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
-import RoundedImage from '@/src/components/RoundedImage/RoundedImage'
+import RoundedImage from '@/src/components/RoundedImage'
+import { Outfit } from "next/font/google";
+
+const titleFont = Outfit({
+  weight: ['400', '600', '700'],
+  subsets: ['latin']
+})
 
 const CustomLink = (props: any) => {
   const href = props.href
@@ -100,11 +106,11 @@ export default function Article({ params }: { params: any }) {
   const postStats = ReadingTime(post.body.raw)
 
   return (
-    <section className={ Styles.post }>
-      <h1 className={ Styles.title }>{ post.title }</h1>
+    <section className="page-container">
+      <h3 className={`${titleFont.className} app-card-title`}>{ post.title }</h3>
       <div className={ Styles.description }>
-        <span>{ DateUtility.formatArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
-        <span>{ postStats.text }</span>
+        <span className="date">{ DateUtility.formatArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
+        <span className="details">{ postStats.text }</span>
       </div>
       <Mdx code={ post.body.code } />
     </section>

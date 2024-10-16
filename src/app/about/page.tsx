@@ -1,4 +1,4 @@
-import ImageGallery from "@/src/components/ImageGallery/ImageGallery";
+import ImageGallery from "@/src/components/ImageGallery";
 import Face from "@/public/assets/jpgs/face.jpg";
 
 const Gallery = [

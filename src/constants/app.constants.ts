@@ -1,5 +1,5 @@
-import { CategoriesIcons, CategoriesTitles } from '@/src/types/CategoriesTypes'
-import { NavigationTab } from '@/src/types/NavigationTypes'
+import { CategoriesIcons, CategoriesTitles } from '@/src/types/types'
+import { NavigationTab } from '@/src/types/types'
 import DiaryIcon from '@/public/assets/svgs/icons/Posts/Diary.svg'
 import Tech1Icon from '@/public/assets/svgs/icons/Posts/Tech1.svg'
 import TechnologyIcon from '@/public/assets/svgs/icons/Posts/Technology.svg'
@@ -42,7 +42,7 @@ const applicationConstants: {
     {
       name: 'posts',
       pathName: '/posts',
-      hide: true
+      hide: false
     },
     {
       name: 'about',

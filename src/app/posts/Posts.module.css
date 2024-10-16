@@ -1,7 +1,3 @@
-.posts {
-  flex: 1 1 auto;
-}
-
 .title {
   margin-bottom: 2rem;
 }
@@ -19,20 +15,22 @@
   align-items: flex-start;
   justify-content: space-between;
   font-size: 16px;
+  line-height: 1.3;
   color: rgb(163, 163, 163);
   transition: transform 0.2s ease-in-out;
 }
 
 .link:hover {
-  transform: scale(1.04) translateX(2%);
+  transform: scale(1.02) translateX(1%);
+  overflow: hidden;
 }
 
 .link:hover .arrow {
-  right: 0;
+  right: -19px;
 }
 
 .postDate {
-  flex: 1;
+  color: #4B4B4B;
 }
 
 .category {
@@ -63,24 +61,28 @@
 }
 
 .postDescription {
+  display: flex;
   position: relative;
   overflow: hidden;
   flex: 5;
-  display: flex;
   flex-direction: column;
 }
 
 .postTitle {
+  max-width: 470px;
+  margin-bottom: 5px;
   overflow: hidden;
   word-wrap: break-word;
-  color: #fff;
+  text-align: left;
+  color: #333333;
   font-weight: 400;
 }
 
 .arrow {
   position: absolute;
-  top: 5px;
-  right: -20px;
+  top: 50%;
+  right: -30px;
+  transform: translate(-50%, -50%);
   transition: right 0.3s ease-in-out;
 }
 

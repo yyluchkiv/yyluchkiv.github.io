@@ -2,7 +2,6 @@
 
 import 'swiper/css'
 import 'swiper/css/scrollbar'
-import Styles from './ImageGallery.module.css'
 import Image, { StaticImageData } from 'next/image'
 import { useState, useLayoutEffect, useEffect } from 'react'
 import { v4 as uuId } from 'uuid'
@@ -10,7 +9,7 @@ import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import { Keyboard, Zoom } from 'swiper/modules'
 import CloseIcon from '@/public/assets/svgs/icons/ImageGallery/Close.svg'
 import ArrowIcon from '@/public/assets/svgs/icons/ImageGallery/Arrow.svg'
-import Loader from '@/src/components/Loader/Loader'
+import Loader from '@/src/components/Loader'
 
 type Orientation = 'v' | 'h'
 type Position = 'l' | 'c' | 'r'
@@ -50,12 +49,12 @@ function useWindowSize () {
 
 function SwiperButtonNext () {
   const swiper = useSwiper()
-  return <Image className={ Styles.arrowRight } src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slideNext(1) } />
+  return <Image className='arrowRight' src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slideNext(1) } />
 }
 
 function SwiperButtonPrev () {
   const swiper = useSwiper()
-  return <Image className={ Styles.arrowLeft } src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slidePrev(1) } />
+  return <Image className='arrowLeft' src={ ArrowIcon } alt='Arrow' width={ 30 } height={ 30 } onClick={ () => swiper.slidePrev(1) } />
 }
 
 const ImageGallery: React.FC<{
@@ -144,8 +143,8 @@ const ImageGallery: React.FC<{
   }
 
   function getGalleryCssClass () {
-    const galleryPosition = position && Styles[position]
-    const galleryOrientation = isVerticalOrientation ? Styles.vertical : Styles.horizontal
+    const galleryPosition = position && 'position'
+    const galleryOrientation = isVerticalOrientation ? 'vertical' : 'horizontal'
 
     return `${ galleryPosition } ${ galleryOrientation }`
   }
@@ -153,7 +152,6 @@ const ImageGallery: React.FC<{
   function getGalleryStyles () {
     let styles: React.CSSProperties = {
       width,
-      height: `${ galleryHeight }rem`,
       gap
     }
 
@@ -168,7 +166,7 @@ const ImageGallery: React.FC<{
   }
 
   function getLineCssClass () {
-    return isVerticalOrientation ? Styles.lineVertical : Styles.lineHorizontal
+    return isVerticalOrientation ? 'lineVertical' : 'lineHorizontal'
   }
 
   function getLineStyles (ratio: number) {
@@ -259,7 +257,7 @@ const ImageGallery: React.FC<{
   const ImageItem: React.FC<{ image: any }> = ({ image }) => {
     const [loadedImage, setLoadedImage] = useState(true)
 
-    function getImageStyle () {
+    function getImageStyle (): React.CSSProperties {
       return {
         display: loadedImage ? 'none' : 'block',
         borderRadius: `${ imageBorderRadius }%`
@@ -267,15 +265,15 @@ const ImageGallery: React.FC<{
     }
 
     return (
-      <div className={ Styles.roundedImage }>
+      <div>
         <Loader loading={ loadedImage } />
         <Image
           onClick={ () => preview && openPreview(image.id - 1) }
-          className={ Styles.image }
+          className="image"
           style={ getImageStyle() }
           src={ image.source }
           alt={ image.alt }
-          fill={ true }
+          fill={ false }
           onLoad={ () => setLoadedImage(false) }
           priority={ true }
           sizes='(max-width: 768px) 1200w, (max-width: 1200px) 1000w, 33vw'
@@ -292,7 +290,7 @@ const ImageGallery: React.FC<{
           <div className={ getLineCssClass() } style={ getLineStyles(galleryItem.ratio) } key={ uuId() }>
             {
               galleryItem.images.map(image => (
-                <div className={ Styles.container } style={ getImageContainerStyles(image.ratio) } key={ uuId() }>
+                <div className="container" style={ getImageContainerStyles(image.ratio) } key={ uuId() }>
                   <ImageItem image={ image } />
                 </div>
               ))
@@ -302,7 +300,7 @@ const ImageGallery: React.FC<{
       }
       {
         preview && showPreview &&
-        <div className={ Styles.swiper }>
+        <div className="swiper">
           <Swiper
             spaceBetween={ 30 }
             slidesPerView={ 1 }
@@ -320,9 +318,9 @@ const ImageGallery: React.FC<{
               updatedGallery.map(galleryItem => (
                 galleryItem.images.map(image => (
                   <SwiperSlide key={ uuId() }>
-                    <div className={ `${Styles.swiperContainer} swiper-zoom-container` }>
+                    <div className={ `swiperContainer swiper-zoom-container` }>
                       <Image
-                        className={ Styles.slideImage }
+                        className="slideImage"
                         src={ image.source }
                         alt={ image.alt }
                         fill={ true }
@@ -336,7 +334,7 @@ const ImageGallery: React.FC<{
             <SwiperButtonNext />
             <SwiperButtonPrev />
           </Swiper>
-          <Image className={ Styles.closeIcon } src={ CloseIcon } alt='Close' width={ 20 } height={ 20 } onClick={ () => closePreview() } />
+          <Image className="closeIcon" src={ CloseIcon } alt='Close' width={ 20 } height={ 20 } onClick={ () => closePreview() } />
         </div>
       }
     </div>

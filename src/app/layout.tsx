@@ -1,8 +1,9 @@
 import {Roboto_Mono} from 'next/font/google'
 import '@/src/app/global.css'
-import Navigation from '@/src/components/Navigation/Navigation'
-import Footer from '@/src/components/Footer/Footer'
-import CookieConsent from '@/src/components/CookieConsent/CookieConsent'
+import Navigation from '@/src/components/Navigation'
+import Footer from '@/src/components/Footer'
+import CookieConsent from '@/src/components/CookieConsent'
+import '@/src/components/global.css'
 
 const appFont = Roboto_Mono({
   weight: '400',

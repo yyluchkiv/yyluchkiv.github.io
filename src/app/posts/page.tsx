@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ReadingTime from 'reading-time'
 import ApplicationConstants from '@/src/constants/app.constants'
-import { CategoriesIcons } from '@/src/types/CategoriesTypes'
+import { CategoriesIcons } from '@/src/types/types'
 import { useState } from 'react'
 import DateUtility from '@/src/utilities/DateUtility'
 import ArrowIcon from '@/public/assets/svgs/icons/Posts/Arrow.svg'
@@ -41,12 +41,12 @@ export default function Blog () {
   }
 
   return (
-    <div className={ Styles.posts }>
+    <div className="page-container posts-container">
       <ul className={ Styles.post }>
         { sortedPosts.map(post => {
           if (!post.hide) {
             return (
-              <li key={ post.slug }>
+              <li key={ post.slug } className="app-card">
                 <Link href={ `posts/${ post.slug }` } className={ Styles.link }>
                   <span className={ Styles.postDate }>{ DateUtility.formatArticleDate(post.publishedAt) }</span>
                   <CategoryImage category={ post.category } />

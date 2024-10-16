@@ -1,6 +1,5 @@
 'use client'
 
-import Styles from './CookieConsent.module.css'
 import {NextFont} from 'next/dist/compiled/@next/font'
 import {hasCookie, setCookie} from 'cookies-next'
 import React, {useEffect, useState} from 'react'
@@ -27,15 +26,15 @@ const CookieConsent: React.FC<{ localFont: NextFont }> = ({ localFont }) => {
   }
 
   return (
-    <div className={ `${ Styles.cookie } ${ localFont.className }`}>
-      <div className={ Styles.wrapper }>
-        <div className={ Styles.content }>
+    <div className={ `cookie ${ localFont.className }`}>
+      <div className="wrapper">
+        <div className="content">
           <Image src={ CookiesIcon } alt='cookies-icon' height={ 30 } />
-          <span className={ Styles.text }>
+          <span className="text">
             This website uses cookies to improve user experience.
           </span>
         </div>
-        <button className={ Styles.acceptButton } onClick={ () => acceptCookie() }>
+        <button className="acceptButton" onClick={ () => acceptCookie() }>
           Accept
         </button>
       </div>
