@@ -13,15 +13,15 @@ const appFont = Roboto_Mono({
 export const generateMetadata = () => {
   return {
     metadataBase: new URL('https://yyluchkiv.com'),
-    title: 'Yurii Luchkiv | Build apps',
+    title: 'Yurii Luchkiv | Software Engineer',
     description: 'Code hard. Work hard. Spend time with your family',
     twitter: {
-      title: 'Yurii Luchkiv | Build apps',
+      title: 'Yurii Luchkiv | Software Engineer',
       card: 'summary_large_image',
       description: 'Code hard. Work hard. Spend time with your family'
     },
     openGraph: {
-      title: 'Yurii Luchkiv | Build apps',
+      title: 'Yurii Luchkiv | Software Engineer',
       description: 'Code hard. Work hard. Spend time with your family',
       siteName: 'yyluchkiv.com',
       url: 'https://yyluchkiv.com',
