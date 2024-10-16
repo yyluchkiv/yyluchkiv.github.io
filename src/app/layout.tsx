@@ -12,35 +12,19 @@ const appFont = Roboto_Mono({
 
 export const generateMetadata = () => {
   return {
-    metadataBase: new URL('https://yyluchkiv.com/'),
-    title: 'Yurii Luchkiv',
-    description: 'Code hard. Work hard. Spend time with your family',
+    metadataBase: new URL('https://yyluchkiv.com'),
+    title: 'Yurii Luchkiv | Software Engineer',
+    description: 'I’ve been a software engineer since 2011 and spent the last ten years building a software development agency. Starting in 2024, I want to realize my ideas and potential. My focus is on building apps and supporting my wife and three children.',
     twitter: {
-      title: 'Yurii Luchkiv',
+      title: 'Yurii Luchkiv | Software Engineer',
       card: 'summary_large_image',
-      description: 'Code hard. Work hard. Spend time with your family',
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
+      description: 'I’ve been a software engineer since 2011 and spent the last ten years building a software development agency. Starting in 2024, I want to realize my ideas and potential. My focus is on building apps and supporting my wife and three children.'
     },
     openGraph: {
-      title: 'Yurii Luchkiv',
-      description: 'Code hard. Work hard. Spend time with your family',
-      siteName: 'yyluchkiv.com/',
-      url: 'https://yyluchkiv.com/',
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
+      title: 'Yurii Luchkiv | Software Engineer',
+      description: 'I’ve been a software engineer since 2011 and spent the last ten years building a software development agency. Starting in 2024, I want to realize my ideas and potential. My focus is on building apps and supporting my wife and three children.',
+      siteName: 'yyluchkiv.com',
+      url: 'https://yyluchkiv.com',
       locale: 'en_US',
       type: 'website',
     }

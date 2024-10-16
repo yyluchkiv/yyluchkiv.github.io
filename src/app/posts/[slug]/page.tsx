@@ -56,35 +56,19 @@ export const generateStaticParams = async () => allPosts.map((post) => ({ slug: 
 export const generateMetadata = ({ params }: { params: any }) => {
   const post = allPosts.find((post) => post.url === params.slug)
   return {
-    metadataBase: new URL('https://yyluchkiv.com/'),
-    title: 'Yurii Luchkiv — ' + post?.title,
+    metadataBase: new URL('https://yyluchkiv.com'),
+    title: 'Yurii Luchkiv | ' + post?.title,
     description: post?.summary,
     twitter: {
-      title: 'Yurii Luchkiv — ' + post?.title,
+      title: 'Yurii Luchkiv | ' + post?.title,
       card: 'summary_large_image',
-      description: post?.summary,
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
+      description: post?.summary
     },
     openGraph: {
-      title: 'Yurii Luchkiv — ' + post?.title,
+      title: 'Yurii Luchkiv | ' + post?.title,
       description: post?.summary,
       siteName: `yyluchkiv.com/posts/${post?.url}`,
       url: `https://yyluchkiv.com/posts/${post?.url}`,
-      images: [
-        {
-          type: "image/png",
-          width: 800,
-          height: 600,
-          url: '/assets/pngs/Home/Main-V120.png'
-        }
-      ],
       locale: post?.locale,
       type: 'article',
     }
@@ -109,7 +93,7 @@ export default function Article({ params }: { params: any }) {
     <section className="page-container">
       <h3 className={`${titleFont.className} app-card-title`}>{ post.title }</h3>
       <div className={ Styles.description }>
-        <span className="date">{ DateUtility.formatArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
+        <span className="date">{ DateUtility.getArticleDate(post.publishedAt) } ({ timeAgo.format(dateTimestamp, 'round') })</span>
         <span className="details">{ postStats.text }</span>
       </div>
       <Mdx code={ post.body.code } />

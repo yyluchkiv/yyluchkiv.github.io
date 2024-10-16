@@ -91,8 +91,8 @@ export default function Home() {
           <div className="home-main-text-container">
               <div className={`${titleFont.className} homepage-title`}>
                   <p>Yurii Luchkiv</p>
-                  <p className="description-text">Passionate about coding</p>
-                  <p className="description-text">🇺🇦 Ukraine</p>
+                  <p className="description-text">Code hard. Work hard. Spend time with your family</p>
+                  <span className="description-text">🇺🇦 Ukraine</span>
                   <ul className="socialList">
                       {socials.map(socialItem => socialItem.visible &&
                           <SocialLink socialItem={socialItem} key={socialItem.alt}/>)}
