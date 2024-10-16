@@ -12,7 +12,7 @@ const appFont = Roboto_Mono({
 
 export const generateMetadata = () => {
   return {
-    metadataBase: new URL('https://yyluchkiv.com/'),
+    metadataBase: new URL('https://yyluchkiv.com'),
     title: 'Yurii Luchkiv',
     description: 'Code hard. Work hard. Spend time with your family',
     twitter: {
@@ -23,8 +23,8 @@ export const generateMetadata = () => {
     openGraph: {
       title: 'Yurii Luchkiv',
       description: 'Code hard. Work hard. Spend time with your family',
-      siteName: 'yyluchkiv.com/',
-      url: 'https://yyluchkiv.com/',
+      siteName: 'yyluchkiv.com',
+      url: 'https://yyluchkiv.com',
       locale: 'en_US',
       type: 'website',
     }
