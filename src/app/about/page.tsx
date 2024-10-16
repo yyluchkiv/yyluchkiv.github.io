@@ -1,6 +1,5 @@
 import ImageGallery from "@/src/components/ImageGallery";
 import Face from "@/public/assets/jpgs/face.jpg";
-import '../../components/global.css';
 
 const Gallery = [
   {
