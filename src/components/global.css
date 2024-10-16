@@ -1,0 +1,571 @@
+.tweet {
+    margin: 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Light theme (default) */
+.tweet :global(.react-tweet-theme) {
+    /* margin is handled by our wrappers */
+    --tweet-container-margin: 0;
+    --tweet-font-family: inherit;
+    --tweet-font-color: inherit;
+
+    /* Light colors */
+    --tweet-bg-color: #fff;
+    --tweet-bg-color-hover: var(--tweet-bg-color);
+    --tweet-color-blue-secondary: theme('colors.gray.600');
+    --tweet-color-blue-secondary-hover: theme('colors.gray.100');
+    --tweet-font-color-secondary: theme('colors.gray.500');
+
+    /* Common properties for both themes */
+    --tweet-quoted-bg-color-hover: rgba(0, 0, 0, 0.03);
+    --tweet-border: 1px solid rgb(207, 217, 222);
+    --tweet-skeleton-gradient: linear-gradient(270deg,#333,#333,#333,#333);
+    --tweet-color-red-primary: rgb(249, 24, 128);
+    --tweet-color-red-primary-hover: rgba(249, 24, 128, 0.1);
+    --tweet-color-green-primary: rgb(0, 186, 124);
+    --tweet-color-green-primary-hover: rgba(0, 186, 124, 0.1);
+    --tweet-twitter-icon-color: var(--tweet-font-color);
+    --tweet-verified-old-color: rgb(130, 154, 171);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    .tweet :global(.react-tweet-theme) {
+        /* Dark theme colors */
+        --tweet-bg-color: #222;
+        --tweet-bg-color-hover: var(--tweet-bg-color);
+        --tweet-quoted-bg-color-hover: rgba(255, 255, 255, 0.03);
+        --tweet-border: 1px solid #333;
+        --tweet-color-blue-secondary: theme('colors.white');
+        --tweet-color-blue-secondary-hover: #333;
+        --tweet-font-color-secondary: theme('colors.gray.400');
+    }
+}
+
+/* Common styles for both themes */
+.tweet :global(.react-tweet-theme p) {
+    font-size: inherit;
+    line-height: 1.3rem;
+}
+
+/* Footer */
+.footer {
+    margin: var(--footer-margin-top-bottom) 0;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialList {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.socialList li {
+    border: 1px solid #7373732e;
+    border-radius: 2px;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.socialList li:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+}
+
+.socialLink {
+    position: relative;
+    display: flex;
+    padding: 3px;
+}
+
+.icon {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.iconHidden {
+    opacity: 0;
+}
+
+.hoverIcon {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hoverIconVisible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin: 1rem 0;
+    }
+
+    .socialList {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ImageGallery */
+.l {
+    margin: 0 auto 0 0;
+}
+
+.c {
+    margin: 0 auto;
+}
+
+.r {
+    margin: 0 0 0 auto;
+}
+
+.horizontal,
+.vertical,
+.lineVertical,
+.lineHorizontal {
+    display: flex;
+}
+
+.horizontal,
+.lineVertical {
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.roundedImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.swiper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.swiperContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slideImage {
+    object-fit: scale-down;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+    transition: all 0.2s ease-in-out;
+}
+
+.closeIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.closeIcon:active {
+    transform: scale(1);
+}
+
+.arrowLeft {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    z-index: 1100;
+    transition: all 0.2s ease-in-out;
+}
+
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1100;
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.arrowLeft:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.arrowRight:hover {
+    transform: rotate(180deg) scale(1.2);
+    cursor: pointer;
+}
+
+.arrowLeft:active {
+    transform: scale(1);
+}
+
+.arrowRight:active {
+    transform: rotate(180deg) scale(1);
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* CookieConsent */
+
+.cookie {
+    padding: 0 1.25rem;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade 0.5s ease-in-out;
+}
+
+.wrapper {
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--body-background-color);
+    box-shadow: 0 0 1.25rem var(--container-background-color);
+    border-radius: var(--container-border-radius);
+    border: 1px solid var(--container-border-color);
+
+    @media (max-width: 768px) {
+        max-width: 540px;
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+    }
+}
+
+.text {
+    text-align: center;
+}
+
+.acceptButton {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: var(--container-background-color);
+    border: 1px solid var(--container-border-color);
+    border-radius: var(--container-border-radius);
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+}
+
+.acceptButton:hover {
+    border-color: var(--body-color);
+    color: var(--body-color);
+}
+
+.acceptButton:active {
+    border-color: var(--container-border-color);
+}
+
+@media (max-width: 768px) {
+    .acceptButton:active {
+        border-color: var(--body-color);
+        color: var(--body-color);
+    }
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/* ArrowLink */
+
+.link {
+    display: inline;
+    transition: filter 0.3s linear;
+}
+
+.link:hover {
+    filter: brightness(150%);
+}
+
+.text {
+    display: inline;
+    margin-left: 0.25rem;
+}
+
+/* PostBanner */
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Links */
+.linkWithBackground {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 1rem 0.75rem;
+}
+
+.name,
+.title {
+    color: rgb(229, 231, 235);
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.subscribers,
+.description {
+    color: rgb(163, 163, 163);
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* YouTubeBanner */
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.imageConteiner {
+    height: 4rem;
+    position: relative;
+}
+
+.image {
+    display: block;
+    border: 1px solid;
+    border-radius: 100%;
+    border-color: var(--container-border-color);
+}
+
+.information {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Loader */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loader div {
+    transform-origin: 40px 40px;
+    animation: loader 1.2s linear infinite;
+}
+
+.loader div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: rgba(255,255,255, 0.3);
+}
+
+.loader div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+}
+
+.loader div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+}
+
+.loader div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+}
+
+.loader div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+}
+
+.loader div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+}
+
+.loader div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+}
+
+.loader div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+}
+
+.loader div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+}
+
+.loader div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+}
+
+.loader div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+}
+
+.loader div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+}
+
+.loader div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--navigation-margin-top);
+}
+
+.list {
+    display: flex;
+    list-style: none;
+}
+
+.item {
+    padding: 0.25rem 0.5rem;
+}
+
+.item:first-child {
+    padding-left: 0;
+}
+
+@media (max-width: 350px) {
+    .list {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        padding-left: 0.25rem;
+    }
+
+    .item:first-child {
+        padding-left: 0.25rem;
+    }
+}
+
+/* RoundedImage */
+.roundedImage {
+    display: flex;
+    justify-content: center;
+}
+
+.roundedImage img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+@media (max-width: 320px) {
+    .roundedImage {
+        min-height: 180px;
+    }
+}
+
+.image {
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

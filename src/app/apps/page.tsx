@@ -1,4 +1,4 @@
-import ArrowLink from "@/src/components/Links/ArrowLink/ArrowLink";
+import ArrowLink from "@/src/components/ArrowLink";
 import { Outfit } from "next/font/google";
 
 const titleFont = Outfit({

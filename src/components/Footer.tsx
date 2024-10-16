@@ -1,11 +1,7 @@
 'use client'
 
-import Styles from './Footer.module.css'
 import packageJSON from '@/package.json'
-import Image, { StaticImageData } from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import DateUtility from '@/src/utilities/DateUtility'
+import  { StaticImageData } from 'next/image'
 import GithubMonoIcon from '@/public/assets/svgs/icons/Footer/Mono/GithubMono.svg'
 import GithubColorIcon from '@/public/assets/svgs/icons/Footer/Color/GithubColor.svg'
 import TwitterMonoIcon from '@/public/assets/svgs/icons/Footer/Mono/TwitterMono.svg'
@@ -21,27 +17,6 @@ interface SocialItem {
   icon: StaticImageData | string,
   hoverIcon: StaticImageData | string
   href: string
-}
-
-const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
-  const [isHovering, setIsHovered] = useState(false)
-
-  function onMouseEnterLink () {
-    setIsHovered(true)
-  }
-
-  function onMouseLeaveLink () {
-    setIsHovered(false)
-  }
-
-  return (
-      <li className={ Styles.socialItem } key={ socialItem.alt } onMouseEnter={ onMouseEnterLink } onMouseLeave={ onMouseLeaveLink } onClick={ onMouseLeaveLink }>
-        <Link className={ Styles.socialLink } href={ socialItem.href } target='_blank'>
-          <Image className={ `${ Styles.icon } ${ isHovering && Styles.iconHidden }` } width={ 25 } height={ 25 } src={ socialItem.icon } alt={ socialItem.alt } priority={ true } />
-          <Image className={ `${ Styles.hoverIcon } ${ isHovering && Styles.hoverIconVisible }` } width={ 25 } height={ 25 } src={ socialItem.hoverIcon } alt={ socialItem.alt } />
-        </Link>
-      </li>
-  )
 }
 
 const Footer: React.FC = () => {
@@ -77,9 +52,9 @@ const Footer: React.FC = () => {
   ]
 
   return (
-      <div className={ Styles.footer }>
-        <div className={ Styles.leftSide }>
-          <span className={ Styles.copyright }>© 2019 — { new Date().getFullYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
+      <div className="footer">
+        <div>
+          <span>© 2019 — { new Date().getFullYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
         </div>
       </div>
   )
