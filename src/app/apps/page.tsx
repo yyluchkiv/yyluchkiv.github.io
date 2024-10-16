@@ -1,8 +1,14 @@
 import ArrowLink from "@/src/components/Links/ArrowLink/ArrowLink";
+import { Outfit } from "next/font/google";
+
+const titleFont = Outfit({
+    weight: ['400', '600', '700'],
+    subsets: ['latin']
+})
 
 export default function About () {
   return (
-    <div className="any-page">
+    <div className="page-container">
       {/*<p>*/}
       {/*  <ArrowLink link={"https://dadapp.app/"} text={"dadapp.app"} imageVisible={true}/>*/}
       {/*</p>*/}
@@ -19,27 +25,17 @@ export default function About () {
       {/*<br/>*/}
       {/*<hr/>*/}
       {/*<br/>*/}
-      <p className="any-page-paragraph">
-        <ArrowLink
-          link={"https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en"}
-          text={"password generator"} imageVisible={true}/>
-      </p>
-      <p className="any-page-paragraph">
-        Chrome Extension: Password Generator - simple, secure, one-click password generator
-      </p>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <p className="any-page-paragraph">
-        ...some are IN PROGRESS
-      </p><br/>
-      <br/>
-      <br/>
-      <br/>
-      <p className="any-page-paragraph">
-        ...and many are FAILED 🙃
-      </p>
+        <div className="app-card">
+            <h3 className={`${titleFont.className} app-card-title`}>Chrome Extension: Password Generator</h3>
+            <p>simple, secure, one-click password generator</p>
+            <a className="link" target={'_blank'} href={"https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en"}>→ password generator</a>
+        </div>
+        <div className="app-card">
+            ...some are IN PROGRESS
+        </div>
+        <div className="app-card">
+            ...and many are FAILED 🙃
+      </div>
     </div>
   )
 }

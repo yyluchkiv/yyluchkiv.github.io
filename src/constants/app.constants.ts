@@ -48,6 +48,11 @@ const applicationConstants: {
       name: 'about',
       pathName: '/about',
       hide: false
+    },
+    {
+      name: 'newsletter',
+      pathName: '/newsletter',
+      hide: true
     }
   ]
 }

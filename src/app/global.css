@@ -56,6 +56,17 @@ article ul {
   padding-left: 1.625rem;
 }
 
+.page-container {
+  max-width: 480px;
+  width: 100%;
+  margin: 20px auto 0 auto;
+}
+
+.about {
+  /*max-width: 100%;*/
+  text-align: justify;
+}
+
 [data-rehype-pretty-code-fragment] pre {
   margin: 1.25rem 0;
   border-radius: 0.5rem;
@@ -191,10 +202,6 @@ article hr {
   margin-top: 0;
 }
 
-.any-page-gallery {
-  margin: 1.00rem 0;
-}
-
 .avatar {
   width: 150px;
   height: 150px;
@@ -209,12 +216,6 @@ article hr {
   line-height: 1.75;
 }
 
-.homepage-container {
-  max-width: 480px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .homepage-title {
   font-size: 36px;
   font-weight: 700;
@@ -227,6 +228,83 @@ article hr {
 
 .link {
   border-bottom: 1px solid #333333;
+}
+
+.app-card {
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.app-card:not(:first-child) {
+  margin-top: 20px;
+}
+
+.app-card-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #252525;
+}
+
+.app-card p {
+  margin-bottom: 5px;
+}
+
+.app-card .link {
+  position: relative;
+  color: #4B4B4B;
+  border-bottom: none;
+  padding-bottom: 5px;
+}
+
+.app-card .link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #333333;
+  transition: width 0.3s ease-in-out;
+}
+
+.app-card .link:hover::after {
+  width: 100%;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter-input {
+  width: 80%;
+}
+
+.newsletter-button {
+  background-color: #252525;
+  color: #ffffff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.newsletter-input {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.newsletter-input::placeholder {
+  font-family: 'Roboto Mono', monospace;
+  color: #333333;
+}
+
+.newsletter-button,
+.newsletter-input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {

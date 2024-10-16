@@ -84,7 +84,7 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
 
 export default function Home() {
   return (
-      <div className="any-page homepage-container">
+      <div className="any-page page-container">
           <div className="any-page-gallery">
               <RoundedImage src={Avatar} alt={Avatar} width={150} height={150}/>
           </div>
