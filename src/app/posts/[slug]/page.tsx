@@ -57,7 +57,7 @@ export const generateMetadata = ({ params }: { params: any }) => {
   const post = allPosts.find((post) => post.url === params.slug)
   return {
     metadataBase: new URL('https://yyluchkiv.com'),
-    title: 'Yurii Luchkiv — ' + post?.title,
+    title: 'Yurii Luchkiv | ' + post?.title,
     description: post?.summary,
     twitter: {
       title: 'Yurii Luchkiv | ' + post?.title,
