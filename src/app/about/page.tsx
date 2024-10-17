@@ -17,7 +17,7 @@ const Gallery = [
 export default function About () {
   return (
     <div className="page-container about">
-      <p>
+      <p className="any-page-paragraph">
         I am a software engineer (since 2011) and a husband (since 2014) and a father (2016, 2019, 2024).
         As long as I can remember, I have always been curious about how things work.
         I enjoy building apps and delivering ideas to the market.

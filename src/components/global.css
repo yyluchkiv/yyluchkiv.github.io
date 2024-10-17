@@ -300,12 +300,15 @@
 }
 
 .acceptButton {
+    font-family: 'Roboto Mono', monospace;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    background-color: var(--container-background-color);
+    background-color: #252525;
+    color: #ffffff;
     border: 1px solid var(--container-border-color);
     border-radius: var(--container-border-radius);
     transition: all 0.3s ease-in-out;
+    scale: 1;
 
     @media (max-width: 576px) {
         width: 100%;
@@ -313,8 +316,7 @@
 }
 
 .acceptButton:hover {
-    border-color: var(--body-color);
-    color: var(--body-color);
+    scale: 1.1;
 }
 
 .acceptButton:active {
