@@ -111,7 +111,7 @@ export default function Home() {
               What do I do?
           </p>
           <div className="any-page-paragraph">
-              <p>→ I provide <a className="homepage-link" target={'_blank'} href={"https://tech1.agency"}>services</a></p>
+              <p>→ I run <a className="homepage-link" target={'_blank'} href={"https://tech1.agency"}>software development agency</a></p>
               <p>→ I build <a className="homepage-link" target={'_blank'} href={"/apps"}>apps</a></p>
               <p className="any-page-paragraph">
                   That&apos;s all Folks 🙃
