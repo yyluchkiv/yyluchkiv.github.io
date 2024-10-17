@@ -117,20 +117,6 @@ export default function Home() {
                   That&apos;s all Folks 🙃
               </p>
           </div>
-
-          {/*Google Analytics*/}
-          <div className="container">
-              <Script src="https://www.googletagmanager.com/gtag/js?id=G-MGGJJG58LQ"/>
-              <Script id="google-analytics">
-                  {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'G-MGGJJG58LQ');
-          `}
-              </Script>
-          </div>
       </div>
   )
 }
