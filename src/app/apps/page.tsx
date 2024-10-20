@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div className="page-container">
       <div className="app-card">
-        <h3 className={`${titleFont.className} app-card-title`}>DadApp, 17 users</h3>
+        <h3 className={`${titleFont.className} app-card-title`}>DadApp, 18 users</h3>
         <p>mobile app to securely store family data</p>
         <a className="link" target={'_blank'}
           href={"https://dadapp.app"}>→
