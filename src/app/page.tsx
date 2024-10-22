@@ -43,7 +43,7 @@ const socials: SocialItem[] = [
         visible: true,
         icon: TwitterMonoIcon,
         hoverIcon: TwitterColorIcon,
-        href: 'https://twitter.com/yyluchkiv'
+        href: 'https://x.com/yyluchkiv'
     },
     {
         alt: 'Youtube',

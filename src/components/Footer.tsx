@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
   return (
       <div className="footer">
         <div>
-          <span>© 2019 — { new Date().getFullYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
+          <span>© { new Date().getFullYear() } Yurii Luchkiv | v{ packageJSON.version }</span>
         </div>
       </div>
   )

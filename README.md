@@ -1,2 +1,2 @@
-# yurii-luchkiv.github.io
-Yurii Luchkiv GitHub Pages
+# yyluchkiv.github.io
+Yurii Luchkiv — <www.yyluchkiv.com>
