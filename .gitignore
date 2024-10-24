@@ -1,56 +1,46 @@
-# Folders
-target/
-.gradle/
-build/
-logs/
-
-# IDEA
+# IDEs
 .idea/
 *.iml
 *.ipr
 *.iws
-
-# Eclipse
 .settings/
 *.classpath
 *.project
 
-# Sonar
-.scannerwork
+# Java
+target/
+.gradle/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Node.js + Front-end
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+*.tsbuildinfo
+next-env.d.ts
 
-# testing
-/coverage
+# Next.js
+.contentlayer/
+.next/
+out/
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# Envs
+.env
 .env*.local
 
-# vercel
-.vercel
+# Sonar
+.sonar
+.scannerwork
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# contentlayer
-.contentlayer
+# Files + Folders
+tmp/
+temp/
+.DS_Store
+*.pem
