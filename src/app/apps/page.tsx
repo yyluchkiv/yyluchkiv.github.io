@@ -11,7 +11,7 @@ export default function About() {
     <div className="page-container">
       <div className="app-card">
         <h3 className={`${titleFont.className} app-card-title`}>DadApp, 200+ users</h3>
-        <p>mobile app to securely store family data</p>
+        <p>mobile app to securely store family data offline</p>
         <a className="link" target={'_blank'} href={"https://dadapp.app"}>
           → dadapp.app
         </a>
