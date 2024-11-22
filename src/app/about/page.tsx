@@ -17,7 +17,8 @@ const Gallery = [
 export default function About() {
   return (
     <div className="page-container about">
-      <div className="any-page-gallery">
+      <a href="/">← Back to home</a>
+      <div className="any-page-gallery about-main-image">
         <ImageGallery gallery={Gallery} gap={15} imageBorderRadius={2} orientation={'h'} preview={false} />
       </div>
       <p className="any-page-paragraph">

@@ -1,6 +1,5 @@
 import { Roboto_Mono } from 'next/font/google'
 import '@/src/app/global.css'
-import Navigation from '@/src/components/Navigation'
 import Footer from '@/src/components/Footer'
 import CookieConsent from '@/src/components/CookieConsent'
 import '@/src/components/global.css'
@@ -35,9 +34,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body>
-        <header className={appFont.className}>
-          <Navigation />
-        </header>
         <main className={appFont.className}>{children}</main>
         <footer className={appFont.className}>
           <Footer />
