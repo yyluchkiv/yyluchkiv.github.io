@@ -20,7 +20,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const titleFont = Outfit({
-    weight: ['400', '700'],
+    weight: ['300', '400', '700'],
     subsets: ['latin']
 })
 
@@ -65,6 +65,7 @@ const socials: SocialItem[] = [
 
 interface App {
     title: string,
+    appUsers: string,
     link: string,
     description: string,
     linkText: string,
@@ -73,14 +74,16 @@ interface App {
 
 const apps: App[] = [
     {
-        title: 'DadApp, 300+ users',
+        title: 'DadApp',
+        appUsers: '300+ users',
         description: 'mobile app to securely store family data offline',
         link: 'https://dadapp.app',
         linkText: '→ dadapp.app',
         logo: DadAppLogo
     },
     {
-        title: 'Password Generator, 3.6k+ users',
+        title: 'Password Generator',
+        appUsers: '3.6k+ users',
         description: 'simple, secure, one-click chrome extension',
         link: 'https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en',
         linkText: '→ password generator',
@@ -159,11 +162,12 @@ export default function Home() {
               <div className="app-cards-container">
                   {apps.slice(0, showAll ? apps.length : 4).map((app, index) =>
                       <a className="app-card" key={index} href={app.link} target={'_blank'}>
-                        <div className="app-card-header-container">
-                            <Image width={20} height={20} src={app.logo} alt={app.title}/>
-                            <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
-                        </div>
-                        <p>{app.description}</p>
+                          <div className="app-card-header-container">
+                              <Image width={20} height={20} src={app.logo} alt={app.title}/>
+                              <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
+                          </div>
+                          <span className={`${titleFont.className} app-card-users`} style={{ fontStyle: 'italic' }}>{app.appUsers}</span>
+                          <p>{app.description}</p>
                       </a>
                   )}
               </div>

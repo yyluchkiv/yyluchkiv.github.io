@@ -275,15 +275,25 @@ article hr {
 }
 
 .app-card {
+  position: relative;
   background-color: #F5F5F5;
   padding: 20px;
   border-radius: 16px;
   transition: all 250ms ease;
 }
 
+.app-card-users {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+
 .app-card:hover {
   scale: 1.05;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
 
 .app-cards-container {
