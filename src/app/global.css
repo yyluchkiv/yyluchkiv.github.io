@@ -267,6 +267,13 @@ article hr {
   height: 100%;
 }
 
+.app-card-header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 .app-card {
   background-color: #F5F5F5;
   padding: 20px;
@@ -278,7 +285,6 @@ article hr {
 }
 
 .app-card-title {
-  margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.3;

@@ -3,6 +3,8 @@
 import '../components/global.css';
 import Script from "next/script";
 import Avatar from "@/public/assets/jpgs/avatar.jpg";
+import DadAppLogo from "@/public/assets/pngs/dad-app-logo.png";
+import PasswordGeneratorLogo from "@/public/assets/pngs/password-generator-logo.png";
 import RoundedImage from "@/src/components/RoundedImage";
 import { Outfit } from 'next/font/google'
 import GithubMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/GithubMono.svg";
@@ -64,19 +66,25 @@ const socials: SocialItem[] = [
 interface App {
     title: string,
     link: string,
-    linkText: string
+    description: string,
+    linkText: string,
+    logo: StaticImageData,
 }
 
 const apps: App[] = [
     {
         title: 'DadApp, 200+ users',
+        description: 'mobile app to securely store family data offline',
         link: 'https://dadapp.app',
-        linkText: '→ dadapp.app'
+        linkText: '→ dadapp.app',
+        logo: DadAppLogo
     },
     {
         title: 'Password Generator, 3k+ users',
+        description: 'simple, secure, one-click chrome extension',
         link: 'https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en',
-        linkText: '→ password generator'
+        linkText: '→ password generator',
+        logo: PasswordGeneratorLogo
     }
 ]
 
@@ -131,7 +139,7 @@ export default function Home() {
               <p>→ 💻 I am a software engineer</p>
               <p>→ ⏳ I have been a software engineer since 2011</p>
               <p>→ 🏁 I plan to continue to be a software engineer</p>
-              <p>→ 📖 <a className="homepage-link" href="/about" target={"_blank"}>Read more about me</a></p>
+              <p>→ 📖 <a className="homepage-link" href="/about">Read more about me</a></p>
           </div>
           <p className="any-page-paragraph">
               What do I do?
@@ -150,8 +158,11 @@ export default function Home() {
               </div>
               {apps.slice(0, showAll ? apps.length : 3).map((app, index) =>
                 <div key={index} className="app-card">
-                    <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
-                    <p>mobile app to securely store family data offline</p>
+                    <div className="app-card-header-container">
+                        <Image width={ 20 } height={ 20 } src={app.logo} alt={app.title} />
+                        <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
+                    </div>
+                    <p>{app.description}</p>
                     <a className="link" target={'_blank'} href={app.link}>
                         {app.linkText}
                     </a>
