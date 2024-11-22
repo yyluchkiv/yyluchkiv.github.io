@@ -278,10 +278,23 @@ article hr {
   background-color: #F5F5F5;
   padding: 20px;
   border-radius: 16px;
+  transition: all 250ms ease;
 }
 
-.app-card:not(:first-child) {
+.app-card:hover {
+  scale: 1.05;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.app-cards-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
   margin-top: 20px;
+}
+
+.app-card {
+  flex-basis: calc((100% - 20px) / 2);
 }
 
 .app-card-title {
@@ -389,6 +402,16 @@ article hr {
   body {
     padding: 0 1.25rem;
   }
+
+  .app-cards-container,
+  .app-card {
+    display: block;
+  }
+
+  .app-card:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
 }
 
 @media (max-width: 730px) {
