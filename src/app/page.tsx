@@ -14,7 +14,7 @@ import YoutubeColorIcon from "@/public/assets/svgs/icons/Footer/Color/YoutubeCol
 import UpworkMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/UpworkMono.svg";
 import UpworkColorIcon from "@/public/assets/svgs/icons/Footer/Color/UpworkColor.svg";
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import {  useState } from "react";
 import Link from "next/link";
 
 const titleFont = Outfit({
@@ -61,6 +61,25 @@ const socials: SocialItem[] = [
     }
 ]
 
+interface App {
+    title: string,
+    link: string,
+    linkText: string
+}
+
+const apps: App[] = [
+    {
+        title: 'DadApp, 200+ users',
+        link: 'https://dadapp.app',
+        linkText: '→ dadapp.app'
+    },
+    {
+        title: 'Password Generator, 3k+ users',
+        link: 'https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en',
+        linkText: '→ password generator'
+    }
+]
+
 const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
     const [isHovering, setIsHovered] = useState(false)
 
@@ -86,6 +105,12 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
 }
 
 export default function Home() {
+    const [showAll, setShowAll] = useState(false)
+
+    function toggleShowAll () {
+        setShowAll(!showAll)
+    }
+
   return (
       <div className="any-page page-container">
           <div className="home-main-text-container">
@@ -99,24 +124,43 @@ export default function Home() {
                   </ul>
               </div>
               <div className="any-page-gallery">
-                  <RoundedImage src={Avatar} alt={Avatar} />
+                  <RoundedImage src={Avatar} alt={Avatar}/>
               </div>
           </div>
           <div className="any-page-paragraph m-0">
               <p>→ 💻 I am a software engineer</p>
               <p>→ ⏳ I have been a software engineer since 2011</p>
               <p>→ 🏁 I plan to continue to be a software engineer</p>
+              <p>→ 📖 <a className="homepage-link" href="/about" target={"_blank"}>Read more about me</a></p>
           </div>
           <p className="any-page-paragraph">
               What do I do?
           </p>
           <div className="any-page-paragraph">
-              <p>→ I run <a className="homepage-link" target={'_blank'} href={"https://tech1.agency"}>software development agency</a></p>
-              <p>→ I build <a className="homepage-link" target={'_blank'} href={"/apps"}>apps</a></p>
-              <p className="any-page-paragraph">
-                  That&apos;s all Folks 🙃
-              </p>
+              <p>→ I run <a className="homepage-link" target={'_blank'} href={"https://tech1.agency"}>software
+                  development agency</a></p>
+              <p>→ I build <a className="homepage-link" href={"#apps"}>apps</a></p>
           </div>
+          <div id="apps">
+              <div className="homepage-subtitle-container">
+                <h4 className={`${titleFont.className} homepage-subtitle`}>Apps</h4>
+                  {apps.length > 3 &&
+                    <button type="button" className="see-more-button" onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
+                  }
+              </div>
+              {apps.slice(0, showAll ? apps.length : 3).map((app, index) =>
+                <div key={index} className="app-card">
+                    <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
+                    <p>mobile app to securely store family data offline</p>
+                    <a className="link" target={'_blank'} href={app.link}>
+                        {app.linkText}
+                    </a>
+                </div>
+              )}
+          </div>
+          <p className="any-page-paragraph">
+              That&apos;s all Folks 🙃
+          </p>
       </div>
   )
 }
