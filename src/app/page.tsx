@@ -14,7 +14,7 @@ import YoutubeColorIcon from "@/public/assets/svgs/icons/Footer/Color/YoutubeCol
 import UpworkMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/UpworkMono.svg";
 import UpworkColorIcon from "@/public/assets/svgs/icons/Footer/Color/UpworkColor.svg";
 import Image, { StaticImageData } from "next/image";
-import {  useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 const titleFont = Outfit({
