@@ -152,22 +152,21 @@ export default function Home() {
           <div id="apps">
               <div className="homepage-subtitle-container">
                 <h4 className={`${titleFont.className} homepage-subtitle`}>Apps</h4>
-                  {apps.length > 3 &&
+                  {apps.length > 4 &&
                     <button type="button" className="see-more-button" onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
                   }
               </div>
-              {apps.slice(0, showAll ? apps.length : 3).map((app, index) =>
-                <div key={index} className="app-card">
-                    <div className="app-card-header-container">
-                        <Image width={ 20 } height={ 20 } src={app.logo} alt={app.title} />
-                        <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
-                    </div>
-                    <p>{app.description}</p>
-                    <a className="link" target={'_blank'} href={app.link}>
-                        {app.linkText}
-                    </a>
-                </div>
-              )}
+              <div className="app-cards-container">
+                  {apps.slice(0, showAll ? apps.length : 4).map((app, index) =>
+                      <a className="app-card" key={index} href={app.link} target={'_blank'}>
+                        <div className="app-card-header-container">
+                            <Image width={20} height={20} src={app.logo} alt={app.title}/>
+                            <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
+                        </div>
+                        <p>{app.description}</p>
+                      </a>
+                  )}
+              </div>
           </div>
           <p className="any-page-paragraph">
               That&apos;s all Folks 🙃
