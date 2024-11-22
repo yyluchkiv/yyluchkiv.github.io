@@ -124,7 +124,7 @@ export default function Home() {
                   </ul>
               </div>
               <div className="any-page-gallery">
-                  <RoundedImage src={Avatar} alt={Avatar}/>
+                  <RoundedImage src={Avatar} alt={Avatar} />
               </div>
           </div>
           <div className="any-page-paragraph m-0">
