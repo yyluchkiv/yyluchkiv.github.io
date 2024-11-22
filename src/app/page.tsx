@@ -73,14 +73,14 @@ interface App {
 
 const apps: App[] = [
     {
-        title: 'DadApp, 200+ users',
+        title: 'DadApp, 300+ users',
         description: 'mobile app to securely store family data offline',
         link: 'https://dadapp.app',
         linkText: '→ dadapp.app',
         logo: DadAppLogo
     },
     {
-        title: 'Password Generator, 3k+ users',
+        title: 'Password Generator, 3.6k+ users',
         description: 'simple, secure, one-click chrome extension',
         link: 'https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en',
         linkText: '→ password generator',
