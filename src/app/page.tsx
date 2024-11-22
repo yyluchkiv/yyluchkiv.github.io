@@ -20,7 +20,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const titleFont = Outfit({
-    weight: ['300', '400', '700', ],
+    weight: ['300', '400', '700'],
     subsets: ['latin']
 })
 
