@@ -164,7 +164,7 @@ export default function Home() {
                   </ul>
               </div>
               <div className="any-page-gallery">
-                  <RoundedImage src={Avatar} alt={Avatar}/>
+                  <RoundedImage src={Avatar} alt={Avatar} />
               </div>
           </div>
           <div className="any-page-paragraph m-0">
@@ -205,8 +205,7 @@ export default function Home() {
               <div className="homepage-subtitle-container">
                   <h4 className={`${titleFont.className} homepage-subtitle`}>Apps</h4>
                   {apps.length > 4 &&
-                      <button type="button" className="see-more-button"
-                              onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
+                      <button type="button" className="see-more-button" onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
                   }
               </div>
               <div className="app-cards-container">
@@ -216,8 +215,7 @@ export default function Home() {
                               <Image width={20} height={20} src={app.logo} alt={app.title}/>
                               <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
                           </div>
-                          <span className={`${titleFont.className} app-card-users`}
-                                style={{fontStyle: 'italic'}}>{app.appUsers}</span>
+                          <span className={`${titleFont.className} app-card-users`} style={{fontStyle: 'italic'}}>{app.appUsers}</span>
                           <p>{app.description}</p>
                       </a>
                   )}
