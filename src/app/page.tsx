@@ -1,10 +1,11 @@
 'use client'
 
 import '../components/global.css';
-import Script from "next/script";
 import Avatar from "@/public/assets/jpgs/avatar.jpg";
-import DadAppLogo from "@/public/assets/pngs/dad-app-logo.png";
-import PasswordGeneratorLogo from "@/public/assets/pngs/password-generator-logo.png";
+import LogoDadApp from "@/public/assets/pngs/logo-dad-app.png";
+import LogoPasswordGenerator from "@/public/assets/pngs/logo-password-generator.png";
+import LogoSlackCLI from '@/public/assets/pngs/logo-slack-cli.png';
+import LogoSmartTrader from '@/public/assets/pngs/logo-smart-trader.png';
 import RoundedImage from "@/src/components/RoundedImage";
 import { Outfit } from 'next/font/google'
 import GithubMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/GithubMono.svg";
@@ -79,7 +80,7 @@ const apps: App[] = [
         description: 'mobile app to securely store family data offline',
         link: 'https://dadapp.app',
         linkText: '→ dadapp.app',
-        logo: DadAppLogo
+        logo: LogoDadApp
     },
     {
         title: 'Password Generator',
@@ -87,7 +88,29 @@ const apps: App[] = [
         description: 'simple, secure, one-click chrome extension',
         link: 'https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en',
         linkText: '→ password generator',
-        logo: PasswordGeneratorLogo
+        logo: LogoPasswordGenerator
+    }
+]
+
+interface PortfolioItem {
+    title: string,
+    description: string,
+    link: string,
+    logo: StaticImageData
+}
+
+const portfolioItems: PortfolioItem[] = [
+    {
+        title: 'SmartTrader',
+        description: 'solution to trade simultaneously on multiple cryptocurrency exchanges',
+        link: 'https://tech1.agency/showcases/smart-trader',
+        logo: LogoSmartTrader
+    },
+    {
+        title: 'Slack CLI',
+        description: 'simplify and automate team workflows and routines',
+        link: 'https://tech1.agency/showcases/slack-cli',
+        logo: LogoSlackCLI
     }
 ]
 
@@ -117,9 +140,14 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
 
 export default function Home() {
     const [showAll, setShowAll] = useState(false)
+    const [showAllPortfolio, setShowAllPortfolio] = useState(false)
 
     function toggleShowAll () {
         setShowAll(!showAll)
+    }
+
+    function toggleShowAllPortfolio () {
+        setShowAllPortfolio(!showAllPortfolio)
     }
 
   return (
@@ -152,12 +180,32 @@ export default function Home() {
                   development agency</a></p>
               <p>→ I build <a className="homepage-link" href={"#apps"}>apps</a></p>
           </div>
+          <div>
+              <div className="homepage-subtitle-container">
+                  <h4 className={`${titleFont.className} homepage-subtitle`}>Portfolio</h4>
+                  {portfolioItems.length > 4 &&
+                      <button type="button" className="see-more-button"
+                              onClick={toggleShowAllPortfolio}>{showAllPortfolio ? 'See Less' : 'See more'}</button>
+                  }
+              </div>
+              <div className="app-cards-container">
+                  {portfolioItems.slice(0, showAllPortfolio ? portfolioItems.length : 4).map((item, index) =>
+                      <a className="app-card" key={index} href={item.link} target={'_blank'}>
+                          <div className="app-card-header-container">
+                              <Image width={20} height={20} src={item.logo} alt={item.title}/>
+                              <h3 className={`${titleFont.className} app-card-title`}>{item.title}</h3>
+                          </div>
+                          <p>{item.description}</p>
+                      </a>
+                  )}
+              </div>
+          </div>
           <div id="apps">
               <div className="homepage-subtitle-container">
                 <h4 className={`${titleFont.className} homepage-subtitle`}>Apps</h4>
-                  {apps.length > 4 &&
-                    <button type="button" className="see-more-button" onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
-                  }
+                    {apps.length > 4 &&
+                        <button type="button" className="see-more-button" onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
+                    }
               </div>
               <div className="app-cards-container">
                   {apps.slice(0, showAll ? apps.length : 4).map((app, index) =>
