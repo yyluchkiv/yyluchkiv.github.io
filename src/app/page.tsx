@@ -1,12 +1,11 @@
 'use client'
 
 import '../components/global.css';
-import Script from "next/script";
 import Avatar from "@/public/assets/jpgs/avatar.jpg";
-import DadAppLogo from "@/public/assets/pngs/dad-app-logo.png";
-import PasswordGeneratorLogo from "@/public/assets/pngs/password-generator-logo.png";
-import SlackCLILogo from '@/public/assets/pngs/slack-cli-logo.png';
-import SmartTraderLogo from '@/public/assets/pngs/smartTraderlogo.png';
+import LogoDadApp from "@/public/assets/pngs/logo-dad-app.png";
+import LogoPasswordGenerator from "@/public/assets/pngs/logo-password-generator.png";
+import LogoSlackCLI from '@/public/assets/pngs/logo-slack-cli.png';
+import LogoSmartTrader from '@/public/assets/pngs/logo-smart-trader.png';
 import RoundedImage from "@/src/components/RoundedImage";
 import { Outfit } from 'next/font/google'
 import GithubMonoIcon from "@/public/assets/svgs/icons/Footer/Mono/GithubMono.svg";
@@ -81,7 +80,7 @@ const apps: App[] = [
         description: 'mobile app to securely store family data offline',
         link: 'https://dadapp.app',
         linkText: '→ dadapp.app',
-        logo: DadAppLogo
+        logo: LogoDadApp
     },
     {
         title: 'Password Generator',
@@ -89,7 +88,7 @@ const apps: App[] = [
         description: 'simple, secure, one-click chrome extension',
         link: 'https://chromewebstore.google.com/detail/password-generator/nbnjbddbbcnnlceoglkfoolmknejieoi?hl=en',
         linkText: '→ password generator',
-        logo: PasswordGeneratorLogo
+        logo: LogoPasswordGenerator
     }
 ]
 
@@ -105,13 +104,13 @@ const portfolioItems: PortfolioItem[] = [
         title: 'SmartTrader',
         description: 'solution to trade simultaneously on multiple cryptocurrency exchanges',
         link: 'https://tech1.agency/showcases/smart-trader',
-        logo: SmartTraderLogo
+        logo: LogoSmartTrader
     },
     {
         title: 'Slack CLI',
         description: 'simplify and automate team workflows and routines',
         link: 'https://tech1.agency/showcases/slack-cli',
-        logo: SlackCLILogo
+        logo: LogoSlackCLI
     }
 ]
 
