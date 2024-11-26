@@ -76,7 +76,7 @@ interface App {
 const apps: App[] = [
     {
         title: 'DadApp',
-        appUsers: '300+ users',
+        appUsers: '400+ users',
         description: 'mobile app to securely store family data offline',
         link: 'https://dadapp.app',
         linkText: '→ dadapp.app',
