@@ -5,7 +5,7 @@ import Docker from '@/public/assets/pngs/docker.png';
 import Spring from '@/public/assets/pngs/spring.png';
 import Lambda from '@/public/assets/pngs/aws-lambda.png';
 
-export default function SlackCLIApp () {
+export default function SlackCLI () {
     return (
         <div className='page-container'>
             <a href="/">← Back to home</a>

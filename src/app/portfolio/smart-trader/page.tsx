@@ -7,7 +7,7 @@ import Spring from '@/public/assets/pngs/spring.png';
 import Vue from '@/public/assets/pngs/vue.png';
 import Postgre from '@/public/assets/pngs/postgre.png';
 
-export default function SmartTraderApp () {
+export default function SmartTrader () {
     return (
         <div className='page-container'>
             <a href="/">← Back to home</a>
