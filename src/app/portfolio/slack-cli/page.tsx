@@ -11,16 +11,16 @@ export default function SlackCLIApp () {
             <a href="/">← Back to home</a>
             <div className='portfolio-card'>
                 <h2>Slack CLI</h2>
-                <p className='portfolio-card__text'>Streamline workflows with a Slack-based app for monitoring and collaboration.</p>
+                <p className='portfolio-card__text'>Streamline workflows for monitoring and collaboration</p>
                 <Image className='portfolio-card__image' src={SlackImage} alt='Slack CLI App'/>
                 <h3 className='portfolio-card__title'>Overview</h3>
-                <div className='portfolio-card__description'>The Infrastructure Slack CLI Center is a powerful Slack-based application designed to simplify and automate workflows within companies. By integrating multiple services into a centralized solution, it provides a seamless way for teams to manage and monitor infrastructure, handle reporting, and streamline recruitment processes directly from Slack.</div>
+                <div className='portfolio-card__description'>The Slack CLI is an application designed to simplify and automate workflows within development teams. By integrating multiple services into a centralized solution, it provides a seamless way for teams to manage and monitor infrastructure, handle reporting, and streamline recruitment processes directly from Slack.</div>
                 <h3 className='portfolio-card__title'>Features</h3>
                 <ul className='portfolio-card__list'>
-                    <li className='portfolio-card__list-item'>→ Advanced infrastructure monitoring with real-time analytics.</li>
-                    <li className='portfolio-card__list-item'>→ Role-based access control to maintain security across teams.</li>
-                    <li className='portfolio-card__list-item'>→ 5+ integrated APIs for enhanced functionality.</li>
-                    <li className='portfolio-card__list-item'>→ User-friendly Slack ChatBot interface for seamless interactions.</li>
+                    <li className='portfolio-card__list-item'>→ Advanced infrastructure monitoring with real-time analytics</li>
+                    <li className='portfolio-card__list-item'>→ Role-based access control to maintain security across teams</li>
+                    <li className='portfolio-card__list-item'>→ 5+ integrated APIs for enhanced functionality</li>
+                    <li className='portfolio-card__list-item'>→ User-friendly Slack chatbot interface for seamless interactions</li>
                 </ul>
                 <h3 className='portfolio-card__title'>Technologies</h3>
                 <ul className='portfolio-card__list technologies'>

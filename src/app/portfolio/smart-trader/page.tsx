@@ -13,16 +13,15 @@ export default function SmartTraderApp () {
             <a href="/">← Back to home</a>
             <div className='portfolio-card'>
                 <h2>Smart Trader</h2>
-                <p className='portfolio-card__text'>Revolutionizing cryptocurrency trading across multiple exchanges</p>
+                <p className='portfolio-card__text'>Trade simultaneously on multiple crypto exchanges</p>
                 <Image className='portfolio-card__image' src={SmartTraderImage} alt='Smart Trader App Screenshot'/>
                 <h3 className='portfolio-card__title'>Overview</h3>
-                <div className='portfolio-card__description'>Smart Trader is an advanced solution for high-frequency cryptocurrency trading. It allows traders to execute trades simultaneously on multiple exchanges like Binance, Bitfinex, and Kraken.</div>
+                <div className='portfolio-card__description'>SmartTrader is an advanced solution for high-frequency cryptocurrency trading. It allows traders to execute/automate trades simultaneously on multiple exchanges: Binance, Bitfinex, and Kraken.</div>
                 <h3 className='portfolio-card__title'>Features</h3>
                 <ul className='portfolio-card__list'>
-                    <li className='portfolio-card__list-item'>→ High-Frequency Trading bots</li>
-                    <li className='portfolio-card__list-item'>→ Real-time analytics and performance tracking</li>
-                    <li className='portfolio-card__list-item'>→ Security measures</li>
-                    <li className='portfolio-card__list-item'>→ Supported exchanges and technologies</li>
+                    <li className='portfolio-card__list-item'>→ HFT bots</li>
+                    <li className='portfolio-card__list-item'>→ Portfolio management</li>
+                    <li className='portfolio-card__list-item'>→ Near real-time analytics and performance tracking</li>
                 </ul>
                 <h3 className='portfolio-card__title'>Technologies</h3>
                 <ul className='portfolio-card__list technologies'>
