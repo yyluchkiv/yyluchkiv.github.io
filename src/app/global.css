@@ -303,8 +303,15 @@ article hr {
   margin-top: 20px;
 }
 
-.app-card {
+.app-card-wrapper {
   flex-basis: calc((100% - 20px) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.app-card {
+  flex: 1;
 }
 
 .app-card-title {
@@ -338,6 +345,18 @@ article hr {
 
 .app-card .link:hover::after {
   width: 100%;
+}
+
+.arrow-icon {
+  transform: rotate(90deg);
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+}
+
+.app-card-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .newsletter-form {
@@ -408,6 +427,75 @@ article hr {
   margin-top: 20px;
 }
 
+.portfolio-card {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #F5F5F5;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.portfolio-card__image {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  background-color: #333333;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.portfolio-card__text {
+  margin-top: 3px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.portfolio-card__description {
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.portfolio-card__list {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: left;
+  list-style-type: none;
+}
+
+.portfolio-card__title {
+  margin-top: 20px;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.technology {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: calc((100% - 40px) / 3);
+  border-radius: 4px;
+  padding: 5px 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.technology-icon {
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.technology-icon.jenkins {
+  filter: brightness(0.5);
+}
+
 @media (max-width: 768px) {
   body {
     padding: 0 1.25rem;
@@ -427,5 +515,9 @@ article hr {
 @media (max-width: 730px) {
   .home-main-text-container {
     margin-bottom: 25px;
+  }
+
+  .technology {
+    flex-basis: calc((100% - 20px) / 2);
   }
 }
