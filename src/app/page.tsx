@@ -96,6 +96,7 @@ interface PortfolioItem {
     title: string,
     description: string,
     link: string,
+    pageLink: string,
     logo: StaticImageData
 }
 
@@ -104,12 +105,14 @@ const portfolioItems: PortfolioItem[] = [
         title: 'SmartTrader',
         description: 'solution to trade simultaneously on multiple cryptocurrency exchanges',
         link: 'https://tech1.agency/showcases/smart-trader',
+        pageLink: '/portfolio/smart-trader',
         logo: LogoSmartTrader
     },
     {
         title: 'Slack CLI',
         description: 'simplify and automate team workflows and routines',
         link: 'https://tech1.agency/showcases/slack-cli',
+        pageLink: '',
         logo: LogoSlackCLI
     }
 ]
@@ -128,14 +131,14 @@ const SocialLink: React.FC<{ socialItem: SocialItem }> = ({ socialItem }) => {
     return (
         <li key={socialItem.alt} onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}
             onClick={onMouseLeaveLink}>
-            <Link className="socialLink" href={socialItem.href} target='_blank'>
+            <Link className="socialLink" href={socialItem.href} target='_blank' rel="noopener noreferrer">
                 <Image className={`icon ${isHovering && 'iconHidden'}`} width={25} height={25} src={socialItem.icon}
                        alt={socialItem.alt} priority={true}/>
                 <Image className={`hoverIcon ${isHovering && 'hoverIconVisible'}`} width={25} height={25}
                        src={socialItem.hoverIcon} alt={socialItem.alt}/>
             </Link>
         </li>
-)
+    )
 }
 
 export default function Home() {
@@ -176,7 +179,7 @@ export default function Home() {
               What do I do?
           </p>
           <div className="any-page-paragraph">
-              <p>→ I run <a className="homepage-link" target={'_blank'} href={"https://tech1.agency"}>software
+              <p>→ I run <a className="homepage-link" target={'_blank'} rel="noopener noreferrer" href={"https://tech1.agency"}>software
                   development agency</a></p>
               <p>→ I build <a className="homepage-link" href={"#apps"}>apps</a></p>
           </div>
@@ -189,27 +192,33 @@ export default function Home() {
                   }
               </div>
               <div className="app-cards-container">
-                  {portfolioItems.slice(0, showAllPortfolio ? portfolioItems.length : 4).map((item, index) =>
-                      <a className="app-card" key={index} href={item.link} target={'_blank'}>
-                          <div className="app-card-header-container">
-                              <Image width={20} height={20} src={item.logo} alt={item.title}/>
-                              <h3 className={`${titleFont.className} app-card-title`}>{item.title}</h3>
-                          </div>
-                          <p>{item.description}</p>
-                      </a>
-                  )}
+                  {portfolioItems.slice(0, showAllPortfolio ? portfolioItems.length : 4).map((item, index) => (
+                      <div className="app-card-wrapper" key={index}>
+                          <a href={item.link} className="app-card" target='_blank' rel="noopener noreferrer">
+                              <div className="app-card-header-container">
+                                  <Image width={20} height={20} src={item.logo} alt={item.title}/>
+                                  <h3 className={`${titleFont.className} app-card-title`}>{item.title}</h3>
+                              </div>
+                              <p>{item.description}</p>
+                          </a>
+                          <a className="app-card-page-link" href={item.pageLink}>
+                              Read more <span className='arrow-icon'>⌃</span>
+                          </a>
+                      </div>
+                  ))}
               </div>
           </div>
           <div id="apps">
               <div className="homepage-subtitle-container">
-                <h4 className={`${titleFont.className} homepage-subtitle`}>Apps</h4>
-                    {apps.length > 4 &&
-                        <button type="button" className="see-more-button" onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
-                    }
+                  <h4 className={`${titleFont.className} homepage-subtitle`}>Apps</h4>
+                  {apps.length > 4 &&
+                      <button type="button" className="see-more-button"
+                              onClick={toggleShowAll}>{showAll ? 'See Less' : 'See more'}</button>
+                  }
               </div>
               <div className="app-cards-container">
                   {apps.slice(0, showAll ? apps.length : 4).map((app, index) =>
-                      <a className="app-card" key={index} href={app.link} target={'_blank'}>
+                      <a className="app-card" key={index} href={app.link} target={'_blank'} rel="noopener noreferrer">
                           <div className="app-card-header-container">
                               <Image width={20} height={20} src={app.logo} alt={app.title}/>
                               <h3 className={`${titleFont.className} app-card-title`}>{app.title}</h3>
