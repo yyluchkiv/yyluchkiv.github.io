@@ -538,13 +538,17 @@ article hr {
   flex-basis: calc((100% - 40px) / 3);
   border-radius: 4px;
   padding: 5px 0;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
 
 .technology-icon {
   width: 100px;
   height: 40px;
   object-fit: contain;
+}
+
+.technology-icon.jenkins {
+  filter: brightness(0.5);
 }
 
 @media (max-width: 768px) {
@@ -566,5 +570,9 @@ article hr {
 @media (max-width: 730px) {
   .home-main-text-container {
     margin-bottom: 25px;
+  }
+
+  .technology {
+    flex-basis: calc((100% - 20px) / 2);
   }
 }

@@ -112,7 +112,7 @@ const portfolioItems: PortfolioItem[] = [
         title: 'Slack CLI',
         description: 'simplify and automate team workflows and routines',
         link: 'https://tech1.agency/showcases/slack-cli',
-        pageLink: '',
+        pageLink: '/portfolio/slack-cli',
         logo: LogoSlackCLI
     }
 ]
