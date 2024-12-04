@@ -347,43 +347,6 @@ article hr {
   width: 100%;
 }
 
-.app-card-page-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.app-card-page-link::after {
-  content: '';
-  position: absolute;
-  bottom: -0.2em;
-  left: 50%;
-  right: 50%;
-  height: 1px;
-  background: #333333;
-  transition: all ease 0.2s;
-}
-
-.app-card-page-link:hover::after {
-  left: 0;
-  right: 0;
-  height: 1px;
-}
-
-.app-card-page-link::before {
-  content: '';
-  position: absolute;
-  transform: translateX(-100%);
-  left: -10px;
-  color: #eee;
-  opacity: 0.3;
-  font-weight: 100;
-  font-size: 0.8em;
-}
-
 .arrow-icon {
   transform: rotate(90deg);
   display: inline-block;
@@ -505,24 +468,6 @@ article hr {
 
 .portfolio-card__title {
   margin-top: 20px;
-}
-
-.portfolio-card__button {
-  display: inline-block;
-  border: none;
-  background-color: #333333;
-  padding: 5px 15px;
-  color: white;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 14px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: scale 250ms ease;
-}
-
-.portfolio-card__button:hover {
-  scale: 1.1;
 }
 
 .technologies {

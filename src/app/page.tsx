@@ -96,7 +96,6 @@ interface PortfolioItem {
     title: string,
     description: string,
     link: string,
-    pageLink: string,
     logo: StaticImageData
 }
 
@@ -104,15 +103,13 @@ const portfolioItems: PortfolioItem[] = [
     {
         title: 'SmartTrader',
         description: 'solution to trade simultaneously on multiple cryptocurrency exchanges',
-        link: 'https://tech1.agency/showcases/smart-trader',
-        pageLink: '/portfolio/smart-trader',
+        link: '/portfolio/smart-trader',
         logo: LogoSmartTrader
     },
     {
         title: 'Slack CLI',
         description: 'simplify and automate team workflows and routines',
-        link: 'https://tech1.agency/showcases/slack-cli',
-        pageLink: '/portfolio/slack-cli',
+        link: '/portfolio/slack-cli',
         logo: LogoSlackCLI
     }
 ]
@@ -200,9 +197,6 @@ export default function Home() {
                                   <h3 className={`${titleFont.className} app-card-title`}>{item.title}</h3>
                               </div>
                               <p>{item.description}</p>
-                          </a>
-                          <a className="app-card-page-link" href={item.pageLink}>
-                              Read more <span className='arrow-icon'>⌃</span>
                           </a>
                       </div>
                   ))}

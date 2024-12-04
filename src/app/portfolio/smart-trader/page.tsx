@@ -1,7 +1,6 @@
 import SmartTraderImage from '@/public/assets/pngs/smart-trader.png';
 import Image from "next/image";
 import Java from '@/public/assets/pngs/java.png';
-import AWS from '@/public/assets/pngs/aws.png';
 import Docker from '@/public/assets/pngs/docker.png';
 import Mongo from '@/public/assets/pngs/mongodb.png';
 import Spring from '@/public/assets/pngs/spring.png';
@@ -28,14 +27,12 @@ export default function SmartTraderApp () {
                 <h3 className='portfolio-card__title'>Technologies</h3>
                 <ul className='portfolio-card__list technologies'>
                     <li className='technology'><Image className='technology-icon' src={Java} alt='Java icon'/></li>
+                    <li className='technology'><Image className='technology-icon' src={Spring} alt='Spring icon'/></li>
                     <li className='technology'><Image className='technology-icon' src={Docker} alt='Docker icon'/></li>
                     <li className='technology'><Image className='technology-icon' src={Postgre} alt='PostgreSQL icon'/></li>
-                    <li className='technology'><Image className='technology-icon' src={Vue} alt='Vue.js icon'/></li>
                     <li className='technology'><Image className='technology-icon' src={Mongo} alt='MongoDB icon'/></li>
-                    <li className='technology'><Image className='technology-icon' src={Spring} alt='Spring icon'/></li>
-                    <li className='technology'><Image className='technology-icon' src={AWS} alt='AWS icon'/></li>
+                    <li className='technology'><Image className='technology-icon' src={Vue} alt='Vue.js icon'/></li>
                 </ul>
-                <a className='portfolio-card__button' href='https://tech1.agency/showcases/smart-trader' target='_blank' rel='noopener noreferrer'>Explore</a>
             </div>
         </div>
     )

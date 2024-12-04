@@ -1,10 +1,8 @@
 import SlackImage from '@/public/assets/pngs/slack-cli.png';
 import Image from "next/image";
 import Java from '@/public/assets/pngs/java.png';
-import AWS from '@/public/assets/pngs/aws.png';
 import Docker from '@/public/assets/pngs/docker.png';
 import Spring from '@/public/assets/pngs/spring.png';
-import Jenkins from '@/public/assets/pngs/jenkins.png';
 import Lambda from '@/public/assets/pngs/aws-lambda.png';
 
 export default function SlackCLIApp () {
@@ -27,13 +25,10 @@ export default function SlackCLIApp () {
                 <h3 className='portfolio-card__title'>Technologies</h3>
                 <ul className='portfolio-card__list technologies'>
                     <li className='technology'><Image className='technology-icon' src={Java} alt='Java icon'/></li>
-                    <li className='technology'><Image className='technology-icon' src={Docker} alt='Docker icon'/></li>
                     <li className='technology'><Image className='technology-icon' src={Spring} alt='Spring icon'/></li>
-                    <li className='technology'><Image className='technology-icon' src={AWS} alt='AWS icon'/></li>
-                    <li className='technology'><Image className='technology-icon jenkins' src={Jenkins} alt='Jenkins icon'/></li>
+                    <li className='technology'><Image className='technology-icon' src={Docker} alt='Docker icon'/></li>
                     <li className='technology'><Image className='technology-icon' src={Lambda} alt='AWS Lambda icon'/></li>
                 </ul>
-                <a className='portfolio-card__button' href='https://tech1.agency/showcases/slack-cli' target='_blank' rel='noopener noreferrer'>Explore</a>
             </div>
         </div>
     )
