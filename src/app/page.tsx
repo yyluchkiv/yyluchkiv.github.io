@@ -191,7 +191,7 @@ export default function Home() {
               <div className="app-cards-container">
                   {portfolioItems.slice(0, showAllPortfolio ? portfolioItems.length : 4).map((item, index) => (
                       <div className="app-card-wrapper" key={index}>
-                          <a href={item.link} className="app-card" target='_blank' rel="noopener noreferrer">
+                          <a href={item.link} className="app-card" rel="noopener noreferrer">
                               <div className="app-card-header-container">
                                   <Image width={20} height={20} src={item.logo} alt={item.title}/>
                                   <h3 className={`${titleFont.className} app-card-title`}>{item.title}</h3>
