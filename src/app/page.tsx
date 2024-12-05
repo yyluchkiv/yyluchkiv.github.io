@@ -155,7 +155,7 @@ export default function Home() {
           <div className="home-main-text-container">
               <div className={`${titleFont.className} homepage-title`}>
                   <p className="main-title">Yurii Luchkiv</p>
-                  <p className="description-text">Code hard. Work hard. Spend time with your family</p>
+                  <p className="description-text">Code hard. Work hard. Spend time with family</p>
                   <p className="description-text location">🇺🇦 Ukraine</p>
                   <ul className="socialList">
                       {socials.map(socialItem => socialItem.visible &&
