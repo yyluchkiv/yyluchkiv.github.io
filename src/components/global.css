@@ -285,6 +285,15 @@
     }
 }
 
+.cookie .content {
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 .content {
     display: flex;
     align-items: center;
